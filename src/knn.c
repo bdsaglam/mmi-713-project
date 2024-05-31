@@ -2,15 +2,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include "common.h"
 
 #define MAX_POINTS 1000
-#define MAX_DIMENSIONS 512
 #define MAX_K 10
-
-typedef struct {
-    int id;
-    double coordinates[MAX_DIMENSIONS];
-} Point;
 
 double distance(Point a, Point b, int dimensions) {
     double sum = 0.0;
@@ -49,43 +44,6 @@ void findTopKNeighbors(Point points[], int n, Point p, int k, int dimensions, in
 
     for (int i = 0; i < k; i++) {
         topKIndices[i] = indices[i];
-    }
-}
-
-void generateRandomPoints(Point points[], int n_points, int n_dim) {
-    srand(time(NULL));
-    for (int i = 0; i < n_points; i++) {
-        points[i].id = i + 1; // Assigning unique IDs starting from 1
-        for (int j = 0; j < n_dim; j++) {
-            points[i].coordinates[j] = (double)rand() / RAND_MAX * 100.0; // Random coordinate between 0 and 100
-        }
-    }
-}
-
-void printPoints(Point points[], int n_points, int n_dim) {
-    for (int i = 0; i < n_points; i++) {
-        printf("Point ID %d: (", points[i].id);
-        for (int j = 0; j < n_dim; j++) {
-            printf("%f", points[i].coordinates[j]);
-            if (j < n_dim - 1) {
-                printf(", ");
-            }
-        }
-        printf(")\n");
-    }
-}
-
-void printNeighbors(Point points[], int *neighbors, int k, int n_dim) {
-    for (int i = 0; i < k; i++) {
-        int index = neighbors[i];
-        printf("Neighbor %d: ID %d (", i, points[index].id);
-        for (int j = 0; j < n_dim; j++) {
-            printf("%f", points[index].coordinates[j]);
-            if (j < n_dim - 1) {
-                printf(", ");
-            }
-        }
-        printf(")\n");
     }
 }
 
