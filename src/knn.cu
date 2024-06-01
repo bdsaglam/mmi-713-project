@@ -189,7 +189,7 @@ int main() {
     
 #endif
 
-    // Print a few results
+    // Print results
     printf("\nTop documents for queries\n");
     printMatrix(h_sorted_indices, Q, N, Q, K);
 
