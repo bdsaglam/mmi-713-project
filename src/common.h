@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 #include <math.h>
 #include <time.h>
 
@@ -26,7 +25,6 @@ void printPoints(Point points[], int n_points, int n_dim) {
 
 
 void generateRandomPoints(Point points[], int n_points, int n_dim) {
-    srand(time(NULL));
     for (int i = 0; i < n_points; i++) {
         points[i].id = i + 1; // Assigning unique IDs starting from 1
         for (int j = 0; j < n_dim; j++) {

@@ -12,3 +12,7 @@ build: build-cpu build-gpu
 
 generate-data:
 	python ./scripts/generate_points.py --n 1000 --dim 512 --out ./data/dataset-1K-512.txt
+
+
+run-gpu: build-gpu
+	bin/knncu
