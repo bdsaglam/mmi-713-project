@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <random>
 #include "sorting.h"
 #include "common.h"
 
@@ -28,14 +29,20 @@ bool areRowsSorted(const T* matrix, int n_rows, int n_cols) {
 }
 
 int main() {
-    float values[] = {
-        173.377, 174.195, 170.147, 180.184, 177.743, 180.625, 172.44, 173.879, 174.055, 162.424,
-        166.112, 171.351, 168.213, 182.188, 172.153, 166, 178.473, 164.797, 170.585, 162.037,
-        170.239, 171.761, 168.462, 178.009, 171.772, 160.761, 163.037, 162.488, 163.554, 165.491
-    };
-    int n_rows = 3;
-    int n_cols = 10;
+    const int n_rows = 100;
+    const int n_cols = 10;
+    float values[n_rows * n_cols];
 
+    // Seed for random number generator
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_real_distribution<> dis(0.0, 10.0);
+
+    // Generate random values for the matrix
+    for (int i = 0; i < n_rows * n_cols; ++i) {
+        values[i] = dis(gen);
+    }
+    
     // Perform argsort on the matrix
     int* sorted_indices = argsort(values, n_rows, n_cols);
     float* sorted_matrix = new float[n_rows * n_cols];
@@ -43,23 +50,11 @@ int main() {
     // Sort the matrix rows based on the argsort results
     sortRowsByIndices(values, sorted_indices, sorted_matrix, n_rows, n_cols);
 
-    // Print the original matrix
-    std::cout << "Original matrix:\n";
-    printMatrix(values, n_rows, n_cols);
-
-    // Print the sorted indices
-    std::cout << "Sorted indices:\n";
-    printMatrix(sorted_indices, n_rows, n_cols);
-
-    // Print the sorted matrix
-    std::cout << "Sorted matrix:\n";
-    printMatrix(sorted_matrix, n_rows, n_cols);
-
     // Verify if the rows are sorted
     if (areRowsSorted(sorted_matrix, n_rows, n_cols)) {
         std::cout << "All rows are sorted." << std::endl;
     } else {
-        std::cout << "Some rows are not sorted." << std::endl;
+        std::cout << "Some rows are not sorted!" << std::endl;
     }
 
     // Clean up dynamically allocated memory
