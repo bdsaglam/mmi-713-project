@@ -6,7 +6,7 @@ build-cpu:
 
 build-gpu:
 	mkdir -p bin/
-	!nvcc src/knn.cu -o bin/knncu
+	nvcc src/knn.cu -o bin/knncu
 
 build: build-cpu build-gpu
 
