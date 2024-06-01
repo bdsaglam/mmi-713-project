@@ -98,6 +98,7 @@ int main() {
     float *h_results = (float *)malloc(Q * N * sizeof(float));
 
     // Initialize data with random values
+    // srand(time(NULL));
     randomInit(h_documents, N, D);
     randomInit(h_queries, Q, D);
 
@@ -149,12 +150,13 @@ int main() {
     sumOverLastDim(h_distances_cpu, h_results_cpu, D, N, Q);
 
     // Output some results to verify
-    srand(time(NULL));
-    const int q = rand() % (Q + 1);
-    printf("Differences for query %d\n", q);
-    for (int i = 0; i < 10; ++i) {
-        int index = q * N + i;
-        printf("Document %d: %f\n", i, h_results[index] - h_results_cpu[index]);
+    for (int q = 0; q < Q; ++q) {
+        float totalError = 0.0;
+        for (int i = 0; i < N; ++i) {
+            int index = q * N + i;
+            totalError += h_results[index] - h_results_cpu[index];
+        }
+        printf("Avg error for query %d: %f\n", q, totalError / N);
     }
 
     free(h_distances_cpu);
