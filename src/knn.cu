@@ -79,24 +79,6 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
         __syncthreads();
     }
 
-    // // Perform reduction in shared memory
-    // for (unsigned int s = blockDim.x / 2; s > 32; s >>= 1) {
-    //     if (tid < s) {
-    //         sdata[tid] += sdata[tid + s];
-    //     }
-    //     __syncthreads();
-    // }
-
-    // // Unrolling the last warp
-    // if (tid < 32) {
-    //     sdata[tid] += sdata[tid + 32];
-    //     sdata[tid] += sdata[tid + 16];
-    //     sdata[tid] += sdata[tid + 8];
-    //     sdata[tid] += sdata[tid + 4];
-    //     sdata[tid] += sdata[tid + 2];
-    //     sdata[tid] += sdata[tid + 1];
-    // }
-
     // Write the result for this block to global memory
     if (tid == 0) {
         g_odata[q * N + n] = sdata[0];
