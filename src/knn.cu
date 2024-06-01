@@ -9,8 +9,6 @@
 
 #define DEBUG 1
 
-// GPU
-
 __global__ void computeL1DistanceKernel(float *documents, float *queries, float *output, int D, int N, int Q) {
     // Calculate the thread's unique ID
     int qIndex = blockIdx.x * blockDim.x + threadIdx.x;
@@ -60,10 +58,10 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
 
 int main() {
     // Example dimensions
-    int D = 512;   // Dimensionality
-    int N = 100;  // Number of documents
+    int D = 512; // Dimension of embedding vector
+    int N = 100; // Number of documents
     int Q = 4;   // Number of queries
-    int K = 10; // Number of matches to return
+    int K = 10;  // Number of matches to return
 
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
