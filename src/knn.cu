@@ -185,7 +185,7 @@ int main() {
     // Deallocate memory
     free(h_distances_cpu);
     free(h_results_cpu);
-    delete[] h_sorted_indices_cpu;
+    free(h_sorted_indices_cpu);
     
 #endif
 
@@ -198,10 +198,11 @@ int main() {
     cudaFree(d_queries);
     cudaFree(d_distances);
     cudaFree(d_results);
-    delete[] h_sorted_indices;
+
     free(h_documents);
     free(h_queries);
     free(h_results);
+    free(h_sorted_indices);
 
     return 0;
 }
