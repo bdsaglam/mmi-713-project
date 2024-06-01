@@ -4,6 +4,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "common.h"
+#include "sorting.h"
 
 #define DEBUG 1
 
@@ -35,27 +36,6 @@ void sumOverLastDim(float *h_distances, float *h_output, int D, int N, int Q) {
             h_output[outputIndex] = sum;
         }
     }
-}
-
-int* argsort(const float* values, int n_rows, int n_cols) {
-    int* indices = new int[n_rows * n_cols];
-
-    // Initialize indices with the values 0, 1, 2, ..., n_cols-1 for each row
-    for (int row = 0; row < n_rows; ++row) {
-        for (int col = 0; col < n_cols; ++col) {
-            indices[row * n_cols + col] = col;
-        }
-    }
-
-    // Sort indices based on values
-    for (int row = 0; row < n_rows; ++row) {
-        std::sort(indices + row * n_cols, indices + (row + 1) * n_cols,
-                  [&values, row, n_cols](int i1, int i2) {
-                      return values[row * n_cols + i1] < values[row * n_cols + i2];
-                  });
-    }
-
-    return indices;
 }
 
 // GPU
@@ -162,7 +142,7 @@ int main() {
 
     // Copy the result back to host
     cudaMemcpy(h_results, d_results, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
-    int* sorted_indices = argsort(h_results, Q, N);
+    int* h_sorted_indices = argsort(h_results, Q, N);
     
     // Verification
 #if DEBUG
@@ -173,7 +153,7 @@ int main() {
     // Perform the same operations on the CPU
     computeL1DistanceCPU(h_documents, h_queries, h_distances_cpu, D, N, Q);
     sumOverLastDim(h_distances_cpu, h_results_cpu, D, N, Q);
-    int* sorted_indices_cpu = argsort(h_results_cpu, Q, N);
+    int* h_sorted_indices_cpu = argsort(h_results_cpu, Q, N);
 
     // Verify the distances by comparing the GPU and CPU results
     for (int q = 0; q < Q; ++q) {
@@ -189,7 +169,7 @@ int main() {
     printf("Distances\n");
     printMatrix(h_results_cpu, Q, N);
     printf("Sorted indices\n");
-    printMatrix(sorted_indices_cpu, Q, N);
+    printMatrix(h_sorted_indices_cpu, Q, N);
 
     // Print a few results
     // Verify the distances by comparing the GPU and CPU results
@@ -197,7 +177,7 @@ int main() {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
-            totalError += sorted_indices[index] - sorted_indices_cpu[index];
+            totalError += h_sorted_indices[index] - h_sorted_indices_cpu[index];
         }
         printf("Avg error for query %d: %f\n", q, totalError / N);
     }
@@ -205,7 +185,7 @@ int main() {
     // Deallocate memory
     free(h_distances_cpu);
     free(h_results_cpu);
-    delete[] sorted_indices_cpu;
+    delete[] h_sorted_indices_cpu;
     
 #endif
 
@@ -214,7 +194,7 @@ int main() {
     cudaFree(d_queries);
     cudaFree(d_distances);
     cudaFree(d_results);
-    free(sorted_indices);
+    delete[] h_sorted_indices;
     free(h_documents);
     free(h_queries);
     free(h_results);
