@@ -113,7 +113,7 @@ int main() {
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    float *h_result = (float *)malloc(Q * N * sizeof(float));
+    float *h_results = (float *)malloc(Q * N * sizeof(float));
 
     // Initialize data with random values
     randomInit(h_documents, N, D);
@@ -156,7 +156,7 @@ int main() {
     }
 
     // Copy the result back to host
-    cudaMemcpy(h_result, d_results, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_results, d_results, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
     
     // Verification
 #if DEBUG
@@ -172,7 +172,7 @@ int main() {
     printf("Differences for query %d\n", q);
     for (int i = 0; i < 10; ++i) {
         int index = q * N + i;
-        printf("Document %d: %f\n", i, h_result[index] - h_results_cpu[index]);
+        printf("Document %d: %f\n", i, h_results[index] - h_results_cpu[index]);
     }
 
     free(h_distances_cpu);
@@ -187,7 +187,7 @@ int main() {
     cudaFree(d_results);
     free(h_documents);
     free(h_queries);
-    free(h_result);
+    free(h_results);
 
     return 0;
 }
