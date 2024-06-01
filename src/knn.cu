@@ -9,6 +9,8 @@
 
 #define DEBUG 1
 
+// Kernel for computing distances for each point in documents and queries. 
+// Output dimensions: QxNxD
 __global__ void computeL1DistanceKernel(float *documents, float *queries, float *output, int D, int N, int Q) {
     // Calculate the thread's unique ID
     int qIndex = blockIdx.x * blockDim.x + threadIdx.x;
@@ -24,7 +26,8 @@ __global__ void computeL1DistanceKernel(float *documents, float *queries, float 
     }
 }
 
-// GPU kernel for summing distance values over the last dimension of a 3D array (QxNxD) flattened in memory
+// Kernel for summing distance values over the last dimension of a 3D array (QxNxD) flattened in memory
+// Output dimensions: QxN
 __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int N, int Q) {
     extern __shared__ float sdata[];
 
