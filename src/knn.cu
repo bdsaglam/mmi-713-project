@@ -5,42 +5,13 @@
 #include <stdlib.h>
 #include "common.h"
 #include "sorting.h"
+#include "knn.h"
 
 #define DEBUG 1
 
-// CPU
-
-void computeL1DistanceCPU(float *documents, float *queries, float *output, int D, int N, int Q) {
-    for (int q = 0; q < Q; ++q) {
-        for (int n = 0; n < N; ++n) {
-            for (int d = 0; d < D; ++d) {
-                int docIndex = n * D + d;
-                int queryIndex = q * D + d;
-                int outputIndex = (q * N + n) * D + d;
-                output[outputIndex] = fabsf(queries[queryIndex] - documents[docIndex]);
-            }
-        }
-    }
-}
-
-// Function to sum over the last dimension
-void sumOverLastDim(float *h_distances, float *h_output, int D, int N, int Q) {
-    for (int q = 0; q < Q; ++q) {
-        for (int n = 0; n < N; ++n) {
-            float sum = 0.0f;
-            for (int d = 0; d < D; ++d) {
-                int index = (q * N + n) * D + d;
-                sum += h_distances[index];
-            }
-            int outputIndex = q * N + n;
-            h_output[outputIndex] = sum;
-        }
-    }
-}
-
 // GPU
 
-__global__ void computeL1Distance(float *documents, float *queries, float *output, int D, int N, int Q) {
+__global__ void computeL1DistanceKernel(float *documents, float *queries, float *output, int D, int N, int Q) {
     // Calculate the thread's unique ID
     int qIndex = blockIdx.x * blockDim.x + threadIdx.x;
     int nIndex = blockIdx.y * blockDim.y + threadIdx.y;
@@ -87,7 +58,6 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
     }
 }
 
-
 int main() {
     // Example dimensions
     int D = 512;   // Dimensionality
@@ -123,10 +93,10 @@ int main() {
                    (D + threadsPerBlock.z - 1) / threadsPerBlock.z);
 
     // Compute L1 distances
-    computeL1Distance<<<numBlocks, threadsPerBlock>>>(d_documents, d_queries, d_distances, D, N, Q);
+    computeL1DistanceKernel<<<numBlocks, threadsPerBlock>>>(d_documents, d_queries, d_distances, D, N, Q);
     cudaError_t err_dist = cudaGetLastError();
     if (err_dist != cudaSuccess) {
-        std::cerr << "Failed to launch computeL1Distance kernel: " << cudaGetErrorString(err_dist) << std::endl;
+        std::cerr << "Failed to launch computeL1DistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
         return -1;
     }
 
@@ -137,7 +107,7 @@ int main() {
     sumOverLastDimKernel<<<gridDim, blockDim, sharedMemSize>>>(d_distances, d_results, D, N, Q);
     cudaError_t err_sum = cudaGetLastError();
     if (err_sum != cudaSuccess) {
-        std::cerr << "Failed to launch sumOverLastDimKernel kernel: " << cudaGetErrorString(err_sum) << std::endl;
+        std::cerr << "Failed to launch sumOverLastDimKernel: " << cudaGetErrorString(err_sum) << std::endl;
         return -1;
     }
 
@@ -152,7 +122,7 @@ int main() {
     float *h_results_cpu = (float *)malloc(Q * N * sizeof(float));
 
     // Perform the same operations on the CPU
-    computeL1DistanceCPU(h_documents, h_queries, h_distances_cpu, D, N, Q);
+    computeL1Distance(h_documents, h_queries, h_distances_cpu, D, N, Q);
     sumOverLastDim(h_distances_cpu, h_results_cpu, D, N, Q);
     int* h_sorted_indices_cpu = argsort(h_results_cpu, Q, N);
 
