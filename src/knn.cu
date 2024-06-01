@@ -156,31 +156,38 @@ int main() {
     int* h_sorted_indices_cpu = argsort(h_results_cpu, Q, N);
 
     // Verify the distances by comparing the GPU and CPU results
+    printf("\nVerifying distance computation...\n");
     for (int q = 0; q < Q; ++q) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
             totalError += h_results[index] - h_results_cpu[index];
         }
-        printf("Avg error for query %d: %f\n", q, totalError / N);
+        float avgError = totalError / N;
+        if (avgError > 1e-3)
+            printf("Avg error for query %d: %f\n", q, avgError);
     }
-
-    // Print a few results
-    printf("Distances\n");
-    printMatrix(h_results_cpu, Q, N);
-    printf("Sorted indices\n");
-    printMatrix(h_sorted_indices_cpu, Q, N);
-
-    // Print a few results
-    // Verify the distances by comparing the GPU and CPU results
+    
+    // Verify the sorting by comparing the GPU and CPU results
+    printf("\nVerifying sorting...\n");
     for (int q = 0; q < Q; ++q) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
             totalError += h_sorted_indices[index] - h_sorted_indices_cpu[index];
         }
-        printf("Avg error for query %d: %f\n", q, totalError / N);
+        float avgError = totalError / N;
+        if (avgError > 1e-3)
+            printf("Avg error for query %d: %f\n", q, avgError);
     }
+
+    // Print a few results
+    printf("\nDistances\n");
+    printMatrix(h_results_cpu, Q, N);
+    printf("\nSorted indices\n");
+    printMatrix(h_sorted_indices_cpu, Q, N);
+
+    // Print a few results
     
     // Deallocate memory
     free(h_distances_cpu);
