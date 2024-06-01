@@ -48,3 +48,14 @@ void printNeighbors(Point points[], int *neighbors, int k, int n_dim) {
         printf(")\n");
     }
 }
+
+
+void randomInit(float* a, int n_rows, int n_cols) {
+    for (int i = 0; i < n_rows; i++)
+    {
+        for (int j = 0; j < n_cols; j++)
+        {
+            a[i*n_cols + j] = rand() / (float)RAND_MAX;
+        }
+    }
+}
