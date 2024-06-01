@@ -91,8 +91,9 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
 int main() {
     // Example dimensions
     int D = 512;   // Dimensionality
-    int N = 10;  // Number of documents
+    int N = 100;  // Number of documents
     int Q = 4;   // Number of queries
+    int K = 10; // Number of matches to return
 
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
@@ -181,20 +182,16 @@ int main() {
             printf("Avg error for query %d: %f\n", q, avgError);
     }
 
-    // Print a few results
-    printf("\nDistances\n");
-    printMatrix(h_results_cpu, Q, N);
-    printf("\nSorted indices\n");
-    printMatrix(h_sorted_indices_cpu, Q, N);
-
-    // Print a few results
-    
     // Deallocate memory
     free(h_distances_cpu);
     free(h_results_cpu);
     delete[] h_sorted_indices_cpu;
     
 #endif
+
+    // Print a few results
+    printf("\nTop documents for queries\n");
+    printMatrix(h_sorted_indices, Q, N, Q, K);
 
     // Clean up memory
     cudaFree(d_documents);
