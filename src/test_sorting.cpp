@@ -6,7 +6,7 @@
 
 // Function to sort matrix rows based on argsort results
 template <typename T>
-void sortRowsByIndices(const T* matrix, const int* sorted_indices, T* sorted_matrix, int n_rows, int n_cols) {
+void sortRowsByIndices(const T* matrix, const long* sorted_indices, T* sorted_matrix, int n_rows, int n_cols) {
     for (int row = 0; row < n_rows; ++row) {
         for (int col = 0; col < n_cols; ++col) {
             sorted_matrix[row * n_cols + col] = matrix[row * n_cols + sorted_indices[row * n_cols + col]];
@@ -44,7 +44,7 @@ int main() {
     }
     
     // Perform argsort on the matrix
-    int* sorted_indices = argsort(values, n_rows, n_cols);
+    long* sorted_indices = argsort(values, n_rows, n_cols);
     float* sorted_matrix = new float[n_rows * n_cols];
 
     // Sort the matrix rows based on the argsort results

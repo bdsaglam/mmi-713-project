@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
     clock_t start = clock();
 
     // KNN algorithm
-    int* h_sorted_indices = knn(h_documents, h_queries, D, N, Q);
+    long* h_sorted_indices = knn(h_documents, h_queries, D, N, Q);
 
     // Measure elapsed time
     clock_t end = clock();

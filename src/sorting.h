@@ -1,7 +1,7 @@
 #include <algorithm>
 
-int* argsort(const float* values, int n_rows, int n_cols) {
-    int* indices = new int[n_rows * n_cols];
+long* argsort(const float* values, int n_rows, int n_cols) {
+    long* indices = new long[n_rows * n_cols];
 
     // Initialize indices with the values 0, 1, 2, ..., n_cols-1 for each row
     for (int row = 0; row < n_rows; ++row) {

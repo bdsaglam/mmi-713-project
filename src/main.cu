@@ -199,7 +199,7 @@ int main(int argc, char *argv[]) {
 
     // Copy the result back to host
     cudaMemcpy(h_results, d_results, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
-    int* h_sorted_indices = argsort(h_results, Q, N);
+    long* h_sorted_indices = argsort(h_results, Q, N);
 
     // Measure elapsed time
     clock_t end = clock();
@@ -215,7 +215,7 @@ int main(int argc, char *argv[]) {
     // Perform the same operations on the CPU
     computeL1Distance(h_documents, h_queries, h_distances_cpu, D, N, Q);
     sumOverLastDim(h_distances_cpu, h_results_cpu, D, N, Q);
-    int* h_sorted_indices_cpu = argsort(h_results_cpu, Q, N);
+    long* h_sorted_indices_cpu = argsort(h_results_cpu, Q, N);
 
     // Verify the distances by comparing the GPU and CPU results
     printf("\nVerifying distance computation...\n");
