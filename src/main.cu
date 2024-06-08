@@ -69,70 +69,61 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
   * @param k           number of smallest element to select
   */
 __global__ void kSelectKernel(float *distances, long *indices, int n_rows, int n_cols, int k) {
-  
-  unsigned int yIndex = blockIdx.x * blockDim.x + threadIdx.x;
-  if (yIndex >= n_rows) return;
+    unsigned int yIndex = blockIdx.x * blockDim.x + threadIdx.x;
+    if (yIndex >= n_rows || k > n_cols) return;
 
-  // Pointer shift, initialization, and max value
-  float *p_dist = distances + yIndex * n_cols;
-  long *p_ind = indices + yIndex * n_cols;
+    // Pointer shift and initialization
+    float *p_dist = distances + yIndex * n_cols;
+    long *p_ind = indices + yIndex * n_cols;
 
-  float max_dist = p_dist[0];
-  p_ind[0] = 0;
-
-  int l, i;
-
-  // Part 1 : sort k-th first elements
-  float curr_dist;
-  long  curr_col;
-  for (l = 1; l < k; l++) {
-    curr_col  = l;
-    curr_dist = p_dist[curr_col];
-    if (curr_dist < max_dist) {
-      // new small element found
-      // find insertion index
-      i = l - 1;
-      for (int a = 0; a < l - 1; a++) {
-        if (p_dist[a] > curr_dist) {
-          i = a;
-          break;
-        }
-      }
-      // shift all elements after insertion index to right
-      for (int j = l; j > i; j--) {
-        p_dist[j] = p_dist[j - 1];
-        p_ind[j]  = p_ind[j - 1];
-      }
-      p_dist[i] = curr_dist;
-      p_ind[i]  = l;
-    } else {
-      p_ind[l] = l;
+    // Initialize indices for tracking positions
+    for (int i = 0; i < n_cols; i++) {
+        p_ind[i] = i;
     }
-    max_dist = p_dist[curr_col];
-  }
 
-  // Part 2 : insert element in the k-th first lines
-  long max_col = k - 1;
-  for (l = k; l < n_cols; l++) {
-    curr_dist = p_dist[l];
-    if (curr_dist < max_dist) {
-      i = k - 1;
-      for (int a = 0; a < k - 1; a++) {
-        if (p_dist[a] > curr_dist) {
-          i = a;
-          break;
+    // Initial sorting of the first k elements using selection sort
+    for (int i = 0; i < k; i++) {
+        int min_idx = i;
+        for (int j = i + 1; j < k; j++) {
+            if (p_dist[j] < p_dist[min_idx]) {
+                min_idx = j;
+            }
         }
-      }
-      for (int j = k - 1; j > i; j--) {
-        p_dist[j] = p_dist[j - 1];
-        p_ind[j]  = p_ind[j - 1];
-      }
-      p_dist[i] = curr_dist;
-      p_ind[i]  = l;
-      max_dist  = p_dist[max_col];
+        // Swap if needed
+        if (min_idx != i) {
+            float temp_dist = p_dist[i];
+            p_dist[i] = p_dist[min_idx];
+            p_dist[min_idx] = temp_dist;
+
+            long temp_ind = p_ind[i];
+            p_ind[i] = p_ind[min_idx];
+            p_ind[min_idx] = temp_ind;
+        }
     }
-  }
+
+    // Set initial max_dist from the first k elements
+    float max_dist = p_dist[k-1];
+
+    // Process remaining elements
+    for (int l = k; l < n_cols; l++) {
+        float curr_dist = p_dist[l];
+        if (curr_dist < max_dist) {
+            // Find the correct position to insert the current distance
+            int i;
+            for (i = k - 1; i > 0 && p_dist[i-1] > curr_dist; i--) {
+                p_dist[i] = p_dist[i-1];
+                p_ind[i] = p_ind[i-1];
+            }
+            p_dist[i] = curr_dist;
+            p_ind[i] = l;
+
+            // Update max_dist
+            max_dist = p_dist[k-1];
+        }
+    }
 }
+
+
 
 
 int main(int argc, char *argv[]) {
@@ -151,8 +142,7 @@ int main(int argc, char *argv[]) {
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    float *h_distances = (float *)malloc(Q * N * D * sizeof(float));
-    float *h_agg_distances = (float *)malloc(Q * N * sizeof(float));
+    long *h_indices = (long *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
     // srand(time(NULL));
@@ -164,10 +154,12 @@ int main(int argc, char *argv[]) {
 
     // Allocate device memory
     float *d_documents, *d_queries, *d_distances, *d_agg_distances;
+    long *d_indices;
     cudaMalloc(&d_documents, N * D * sizeof(float));
     cudaMalloc(&d_queries, Q * D * sizeof(float));
     cudaMalloc(&d_distances, Q * N * D * sizeof(float));
     cudaMalloc(&d_agg_distances, Q * N * sizeof(float));
+    cudaMalloc(&d_indices, Q * N * sizeof(long)); // Device memory for indices
 
     // Copy data from host to device
     cudaMemcpy(d_documents, h_documents, N * D * sizeof(float), cudaMemcpyHostToDevice);
@@ -186,8 +178,6 @@ int main(int argc, char *argv[]) {
         std::cerr << "Failed to launch computeL1DistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
         return -1;
     }
-    // Copy the result back to host
-    cudaMemcpy(h_distances, d_distances, Q * N * D * sizeof(float), cudaMemcpyDeviceToHost);
 
     // Sum over the last dim
     dim3 blockDim(D);
@@ -199,88 +189,33 @@ int main(int argc, char *argv[]) {
         std::cerr << "Failed to launch sumOverLastDimKernel: " << cudaGetErrorString(err_sum) << std::endl;
         return -1;
     }
-
-    // Copy the result back to host
-    cudaMemcpy(h_agg_distances, d_agg_distances, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
-    long* h_sorted_indices = argsort(h_agg_distances, Q, N);
+      
+    // Select k smallest elements
+    int kSelectThreadsPerBlock = 1024;
+    int kSelectBlocksPerGrid = (Q + kSelectThreadsPerBlock - 1) / kSelectThreadsPerBlock;
+    kSelectKernel<<<kSelectBlocksPerGrid, kSelectThreadsPerBlock>>>(d_agg_distances, d_indices, Q, N, K);
+    
+    // Copy the sorted indices back to the host
+    cudaMemcpy(h_indices, d_indices, Q * N * sizeof(long), cudaMemcpyDeviceToHost);
 
     // Measure elapsed time
     clock_t end = clock();
     double elapsed_time_ms = 1000 * (double)(end - start) / CLOCKS_PER_SEC;
     printf("Elapsed time: %f ms\n", elapsed_time_ms);
     
-    // Verification
-#if DEBUG
-    // Allocate memory
-    float *h_distances_cpu = (float *)malloc(Q * N * D * sizeof(float));
-    float *h_agg_distances_cpu = (float *)malloc(Q * N * sizeof(float));
-
-    // Perform the same operations on the CPU
-    computeL1Distance(h_documents, h_queries, h_distances_cpu, D, N, Q);
-    sumOverLastDim(h_distances_cpu, h_agg_distances_cpu, D, N, Q);
-    long* h_sorted_indices_cpu = argsort(h_agg_distances_cpu, Q, N);
-    
-    // Verify the distances by comparing the GPU and CPU results
-    printf("\nVerifying distance computation...\n");
-    for (int q = 0; q < Q; ++q) {
-        float totalError = 0.0;
-        for (int i = 0; i < N; ++i) {
-            for (int j = 0; j < D; ++j) {
-              int index = (q * N + i) * D + j;
-              totalError += abs(h_distances[index] - h_distances_cpu[index]);
-            }
-        }
-        float avgError = totalError / N;
-        if (avgError > 1e-3)
-            printf("Avg error for query %d: %f\n", q, avgError);
-    }
-
-    // Verify the distances by comparing the GPU and CPU results
-    printf("\nVerifying aggregated distances...\n");
-    for (int q = 0; q < Q; ++q) {
-        float totalError = 0.0;
-        for (int i = 0; i < N; ++i) {
-            int index = q * N + i;
-            totalError += abs(h_agg_distances[index] - h_agg_distances_cpu[index]);
-        }
-        float avgError = totalError / N;
-        if (avgError > 1e-3)
-            printf("Avg error for query %d: %f\n", q, avgError);
-    }
-    
-    // Verify the sorting by comparing the GPU and CPU results
-    printf("\nVerifying sorting...\n");
-    for (int q = 0; q < Q; ++q) {
-        float totalError = 0.0;
-        for (int i = 0; i < N; ++i) {
-            int index = q * N + i;
-            totalError += abs(h_sorted_indices[index] - h_sorted_indices_cpu[index]);
-        }
-        float avgError = totalError / N;
-        if (avgError > 1e-3)
-            printf("Avg error for query %d: %f\n", q, avgError);
-    }
-
-    // Deallocate memory
-    free(h_distances_cpu);
-    free(h_agg_distances_cpu);
-    free(h_sorted_indices_cpu);
-    
-#endif
-
     // Print results
-    printResults(h_sorted_indices, Q, N, K);
+    printResults(h_indices, Q, N, K);
 
     // Clean up memory
     cudaFree(d_documents);
     cudaFree(d_queries);
     cudaFree(d_distances);
     cudaFree(d_agg_distances);
+    cudaFree(d_indices);
 
     free(h_documents);
     free(h_queries);
-    free(h_agg_distances);
-    free(h_sorted_indices);
+    free(h_indices);
 
     return 0;
 }
