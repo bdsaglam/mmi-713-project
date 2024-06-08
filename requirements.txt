@@ -3,3 +3,5 @@ jupyter
 pandas
 matplotlib
 typer
+datasets
+sentence-transformers
