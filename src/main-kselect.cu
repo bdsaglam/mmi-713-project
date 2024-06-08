@@ -151,8 +151,9 @@ int main(int argc, char *argv[]) {
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    long *h_indices = (long *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
+    float *h_distances = (float *)malloc(Q * N * D * sizeof(float));
     float *h_agg_distances = (float *)malloc(Q * N * sizeof(float));
+    long *h_indices = (long *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
     // srand(time(NULL));
@@ -168,8 +169,8 @@ int main(int argc, char *argv[]) {
     cudaMalloc(&d_documents, N * D * sizeof(float));
     cudaMalloc(&d_queries, Q * D * sizeof(float));
     cudaMalloc(&d_distances, Q * N * D * sizeof(float));
-    cudaMalloc(&d_indices, Q * N * sizeof(long)); // Device memory for indices
     cudaMalloc(&d_agg_distances, Q * N * sizeof(float));
+    cudaMalloc(&d_indices, Q * N * sizeof(long)); // Device memory for indices
 
     // Copy data from host to device
     cudaMemcpy(d_documents, h_documents, N * D * sizeof(float), cudaMemcpyHostToDevice);
@@ -188,6 +189,8 @@ int main(int argc, char *argv[]) {
         std::cerr << "Failed to launch computeL1DistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
         return -1;
     }
+    // Copy the result back to host
+    cudaMemcpy(h_distances, d_distances, Q * N * D * sizeof(float), cudaMemcpyDeviceToHost);
 
     // Sum over the last dim
     dim3 blockDim(D);
@@ -199,16 +202,17 @@ int main(int argc, char *argv[]) {
         std::cerr << "Failed to launch sumOverLastDimKernel: " << cudaGetErrorString(err_sum) << std::endl;
         return -1;
     }
+    cudaMemcpy(h_agg_distances, d_agg_distances, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
+      
     // Select k smallest elements
     int kSelectThreadsPerBlock = 256;
     int kSelectBlocksPerGrid = (Q + kSelectThreadsPerBlock - 1) / kSelectThreadsPerBlock;
     kSelectKernel<<<kSelectBlocksPerGrid, kSelectThreadsPerBlock>>>(d_agg_distances, d_indices, Q, N, K);
-
+    
     // Copy the sorted indices back to the host
     cudaMemcpy(h_indices, d_indices, Q * N * sizeof(long), cudaMemcpyDeviceToHost);
 
     // Copy the result back to host
-    cudaMemcpy(h_agg_distances, d_agg_distances, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
     long* h_sorted_indices = argsort(h_agg_distances, Q, N);
 
     // Measure elapsed time
@@ -216,9 +220,6 @@ int main(int argc, char *argv[]) {
     double elapsed_time_ms = 1000 * (double)(end - start) / CLOCKS_PER_SEC;
     printf("Elapsed time: %f ms\n", elapsed_time_ms);
     
-    // Display the results
-    printResults(h_indices, Q, N, K); // Adjust printResults function to take long* indices
-
     // Print results
     printResults(h_sorted_indices, Q, N, K);
 
@@ -232,9 +233,24 @@ int main(int argc, char *argv[]) {
     computeL1Distance(h_documents, h_queries, h_distances_cpu, D, N, Q);
     sumOverLastDim(h_distances_cpu, h_agg_distances_cpu, D, N, Q);
     long* h_sorted_indices_cpu = argsort(h_agg_distances_cpu, Q, N);
-
+    
     // Verify the distances by comparing the GPU and CPU results
     printf("\nVerifying distance computation...\n");
+    for (int q = 0; q < Q; ++q) {
+        float totalError = 0.0;
+        for (int i = 0; i < N; ++i) {
+            for (int j = 0; j < D; ++j) {
+              int index = (q * N + i) * D + j;
+              totalError += abs(h_distances[index] - h_distances_cpu[index]);
+            }
+        }
+        float avgError = totalError / N;
+        if (avgError > 1e-3)
+            printf("Avg error for query %d: %f\n", q, avgError);
+    }
+
+    // Verify the distances by comparing the GPU and CPU results
+    printf("\nVerifying aggregated distances...\n");
     for (int q = 0; q < Q; ++q) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
@@ -258,7 +274,7 @@ int main(int argc, char *argv[]) {
         if (avgError > 1e-3)
             printf("Avg error for query %d: %f\n", q, avgError);
     }
-    
+
     // Verify the k-select by comparing the GPU and CPU results
     printf("\nVerifying k-select...\n");
     for (int q = 0; q < Q; ++q) {
@@ -284,10 +300,12 @@ int main(int argc, char *argv[]) {
     cudaFree(d_queries);
     cudaFree(d_distances);
     cudaFree(d_agg_distances);
+    cudaFree(d_indices);
 
     free(h_documents);
     free(h_queries);
     free(h_agg_distances);
+    free(h_indices);
     free(h_sorted_indices);
 
     return 0;
