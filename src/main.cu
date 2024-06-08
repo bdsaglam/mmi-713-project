@@ -153,6 +153,9 @@ int main() {
     randomInit(h_documents, N, D);
     randomInit(h_queries, Q, D);
 
+    // Mark start time
+    clock_t start = clock();
+
     // Allocate device memory
     float *d_documents, *d_queries, *d_distances, *d_results;
     cudaMalloc(&d_documents, N * D * sizeof(float));
@@ -192,6 +195,11 @@ int main() {
     // Copy the result back to host
     cudaMemcpy(h_results, d_results, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
     int* h_sorted_indices = argsort(h_results, Q, N);
+
+    // Measure elapsed time
+    clock_t end = clock();
+    double elapsed_time_ms = 1000 * (double)(end - start) / CLOCKS_PER_SEC;
+    printf("Elapsed time: %f ms\n", elapsed_time_ms);
     
     // Verification
 #if DEBUG
