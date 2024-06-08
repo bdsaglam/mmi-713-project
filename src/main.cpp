@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
     // Constants
     int D = 512;   // Dimensionality
     int Q = 10;   // Number of queries
+    int K = 10;  // Number of matches to return
 
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
@@ -38,10 +39,8 @@ int main(int argc, char *argv[]) {
     double elapsed_time_ms = 1000 * (double)(end - start) / CLOCKS_PER_SEC;
     printf("Elapsed time: %f ms\n", elapsed_time_ms);
 
-    // Print a few results
-    printf("================================================================\n");
-    printResults(h_sorted_indices, Q, N, 10);
-    printf("================================================================\n");
+    // Print results
+    printResults(h_sorted_indices, Q, N, K);
 
     // Clean up memory
     free(h_documents);

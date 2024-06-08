@@ -136,10 +136,11 @@ __global__ void kSelectKernel(float *distances, long *indices, int n_rows, int n
 
 
 int main() {
-    // Example dimensions
-    int D = 512; // Dimension of embedding vector
     int N = 100; // Number of documents
-    int Q = 4;   // Number of queries
+
+    // Constants
+    int D = 512; // Dimension of embedding vector
+    int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
 
     // Allocate host memory
@@ -237,8 +238,7 @@ int main() {
 #endif
 
     // Print results
-    printf("\nTop documents for queries\n");
-    printMatrix(h_sorted_indices, Q, N, Q, K);
+    printResults(h_sorted_indices, Q, N, K);
 
     // Clean up memory
     cudaFree(d_documents);

@@ -26,6 +26,7 @@ void printMatrix(const T* matrix, int n_rows, int n_cols, int rows_to_print, int
 
 template <typename T>
 void printResults(const T* matrix, int n_rows, int n_cols, int cols_to_print) {
+    printf("================================================================\n");
     for (int row = 0; row < n_rows; ++row) {
         std::cout << "Query " << row << ": Top " <<  cols_to_print << " matching docs" << std::endl;
         for (int col = 0; col < std::min(n_cols, cols_to_print); ++col) {
@@ -33,4 +34,5 @@ void printResults(const T* matrix, int n_rows, int n_cols, int cols_to_print) {
         }
         std::cout << std::endl;
     }
+    printf("================================================================\n");
 }
