@@ -223,7 +223,7 @@ int main(int argc, char *argv[]) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
-            totalError += h_agg_distances[index] - h_agg_distances_cpu[index];
+            totalError += abs(h_agg_distances[index] - h_agg_distances_cpu[index]);
         }
         float avgError = totalError / N;
         if (avgError > 1e-3)
@@ -236,7 +236,7 @@ int main(int argc, char *argv[]) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
-            totalError += h_sorted_indices[index] - h_sorted_indices_cpu[index];
+            totalError += abs(h_sorted_indices[index] - h_sorted_indices_cpu[index]);
         }
         float avgError = totalError / N;
         if (avgError > 1e-3)
