@@ -2,7 +2,7 @@ PHONY: build-cpu build-gpu build generate-data run-cpu run-gpu
 
 build-cpu:
 	mkdir -p bin/
-	g++ src/main.cpp -o bin/main_cpp -lm
+	g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
 	g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
 
 build-gpu:
@@ -15,7 +15,7 @@ generate-data:
 	python ./scripts/generate_points.py --n 1000 --dim 512 --out ./data/dataset-1K-512.txt
 
 run-cpu: build-cpu
-	bin/knn_cpp
+	bin/main_cpp
 
 run-gpu: build-gpu
 	bin/knn_cu
