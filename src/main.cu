@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
     int N = atoi(argv[1]); // Number of documents
 
     // Constants
-    int D = 384; // Dimension of embedding vector
+    int D = 512; // Dimension of embedding vector
     int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
 
@@ -236,7 +236,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Verify the distances by comparing the GPU and CPU results
-    printf("\nVerifying aggregated distances ...\n");
+    printf("\nVerifying aggregated distances...\n");
     for (int q = 0; q < Q; ++q) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
@@ -248,18 +248,18 @@ int main(int argc, char *argv[]) {
             printf("Avg error for query %d: %f\n", q, avgError);
     }
     
-    // // Verify the sorting by comparing the GPU and CPU results
-    // printf("\nVerifying sorting...\n");
-    // for (int q = 0; q < Q; ++q) {
-    //     float totalError = 0.0;
-    //     for (int i = 0; i < N; ++i) {
-    //         int index = q * N + i;
-    //         totalError += abs(h_sorted_indices[index] - h_sorted_indices_cpu[index]);
-    //     }
-    //     float avgError = totalError / N;
-    //     if (avgError > 1e-3)
-    //         printf("Avg error for query %d: %f\n", q, avgError);
-    // }
+    // Verify the sorting by comparing the GPU and CPU results
+    printf("\nVerifying sorting...\n");
+    for (int q = 0; q < Q; ++q) {
+        float totalError = 0.0;
+        for (int i = 0; i < N; ++i) {
+            int index = q * N + i;
+            totalError += abs(h_sorted_indices[index] - h_sorted_indices_cpu[index]);
+        }
+        float avgError = totalError / N;
+        if (avgError > 1e-3)
+            printf("Avg error for query %d: %f\n", q, avgError);
+    }
 
     // Deallocate memory
     free(h_distances_cpu);

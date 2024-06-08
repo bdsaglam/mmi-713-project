@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
     int N = atoi(argv[1]); // Number of documents
 
     // Constants
-    int D = 384; // Dimension of embedding vector
+    int D = 512; // Dimension of embedding vector
     int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
 
