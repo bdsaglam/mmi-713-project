@@ -151,7 +151,7 @@ int main(int argc, char *argv[]) {
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    float *h_results = (float *)malloc(Q * N * sizeof(float));
+    float *h_agg_distances = (float *)malloc(Q * N * sizeof(float));
 
     // Initialize data with random values
     // srand(time(NULL));
@@ -162,11 +162,11 @@ int main(int argc, char *argv[]) {
     clock_t start = clock();
 
     // Allocate device memory
-    float *d_documents, *d_queries, *d_distances, *d_results;
+    float *d_documents, *d_queries, *d_distances, *d_agg_distances;
     cudaMalloc(&d_documents, N * D * sizeof(float));
     cudaMalloc(&d_queries, Q * D * sizeof(float));
     cudaMalloc(&d_distances, Q * N * D * sizeof(float));
-    cudaMalloc(&d_results, Q * N * sizeof(float));
+    cudaMalloc(&d_agg_distances, Q * N * sizeof(float));
 
     // Copy data from host to device
     cudaMemcpy(d_documents, h_documents, N * D * sizeof(float), cudaMemcpyHostToDevice);
@@ -190,7 +190,7 @@ int main(int argc, char *argv[]) {
     dim3 blockDim(D);  // Ensure blockDim does not exceed 512
     dim3 gridDim(1, N, Q);
     size_t sharedMemSize = D * sizeof(float);
-    sumOverLastDimKernel<<<gridDim, blockDim, sharedMemSize>>>(d_distances, d_results, D, N, Q);
+    sumOverLastDimKernel<<<gridDim, blockDim, sharedMemSize>>>(d_distances, d_agg_distances, D, N, Q);
     cudaError_t err_sum = cudaGetLastError();
     if (err_sum != cudaSuccess) {
         std::cerr << "Failed to launch sumOverLastDimKernel: " << cudaGetErrorString(err_sum) << std::endl;
@@ -198,8 +198,8 @@ int main(int argc, char *argv[]) {
     }
 
     // Copy the result back to host
-    cudaMemcpy(h_results, d_results, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
-    long* h_sorted_indices = argsort(h_results, Q, N);
+    cudaMemcpy(h_agg_distances, d_agg_distances, Q * N * sizeof(float), cudaMemcpyDeviceToHost);
+    long* h_sorted_indices = argsort(h_agg_distances, Q, N);
 
     // Measure elapsed time
     clock_t end = clock();
@@ -210,12 +210,12 @@ int main(int argc, char *argv[]) {
 #if DEBUG
     // Allocate memory
     float *h_distances_cpu = (float *)malloc(Q * N * D * sizeof(float));
-    float *h_results_cpu = (float *)malloc(Q * N * sizeof(float));
+    float *h_agg_distances_cpu = (float *)malloc(Q * N * sizeof(float));
 
     // Perform the same operations on the CPU
     computeL1Distance(h_documents, h_queries, h_distances_cpu, D, N, Q);
-    sumOverLastDim(h_distances_cpu, h_results_cpu, D, N, Q);
-    long* h_sorted_indices_cpu = argsort(h_results_cpu, Q, N);
+    sumOverLastDim(h_distances_cpu, h_agg_distances_cpu, D, N, Q);
+    long* h_sorted_indices_cpu = argsort(h_agg_distances_cpu, Q, N);
 
     // Verify the distances by comparing the GPU and CPU results
     printf("\nVerifying distance computation...\n");
@@ -223,7 +223,7 @@ int main(int argc, char *argv[]) {
         float totalError = 0.0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
-            totalError += h_results[index] - h_results_cpu[index];
+            totalError += h_agg_distances[index] - h_agg_distances_cpu[index];
         }
         float avgError = totalError / N;
         if (avgError > 1e-3)
@@ -245,7 +245,7 @@ int main(int argc, char *argv[]) {
 
     // Deallocate memory
     free(h_distances_cpu);
-    free(h_results_cpu);
+    free(h_agg_distances_cpu);
     free(h_sorted_indices_cpu);
     
 #endif
@@ -257,11 +257,11 @@ int main(int argc, char *argv[]) {
     cudaFree(d_documents);
     cudaFree(d_queries);
     cudaFree(d_distances);
-    cudaFree(d_results);
+    cudaFree(d_agg_distances);
 
     free(h_documents);
     free(h_queries);
-    free(h_results);
+    free(h_agg_distances);
     free(h_sorted_indices);
 
     return 0;
