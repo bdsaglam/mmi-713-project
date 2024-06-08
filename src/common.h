@@ -14,9 +14,20 @@ void randomInit(float* a, int n_rows, int n_cols) {
 }
 
 template <typename T>
-void printMatrix(const T* matrix, int n_rows, int n_cols, int rows_to_print = 3, int cols_to_print = 10) {
+void printMatrix(const T* matrix, int n_rows, int n_cols, int rows_to_print, int cols_to_print) {
     for (int row = 0; row < std::min(n_rows, rows_to_print); ++row) {
         std::cout << "Row " << row << std::endl;
+        for (int col = 0; col < std::min(n_cols, cols_to_print); ++col) {
+            std::cout << matrix[row * n_cols + col] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+template <typename T>
+void printResults(const T* matrix, int n_rows, int n_cols, int cols_to_print) {
+    for (int row = 0; row < n_rows; ++row) {
+        std::cout << "Query " << row << ": Top " <<  cols_to_print << " matching docs" << std::endl;
         for (int col = 0; col < std::min(n_cols, cols_to_print); ++col) {
             std::cout << matrix[row * n_cols + col] << " ";
         }

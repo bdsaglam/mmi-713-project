@@ -15,10 +15,10 @@ generate-data:
 	python ./scripts/generate_points.py --n 1000 --dim 512 --out ./data/dataset-1K-512.txt
 
 run-cpu: build-cpu
-	bin/main_cpp
+	bin/main_cpp $(ARGS)
 
 run-gpu: build-gpu
-	bin/knn_cu
+	bin/knn_cu $(ARGS)
 
 test: build-cpu
 	bin/test_sorting_cpp
