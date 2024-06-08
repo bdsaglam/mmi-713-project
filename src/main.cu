@@ -135,8 +135,13 @@ __global__ void kSelectKernel(float *distances, long *indices, int n_rows, int n
 }
 
 
-int main() {
-    int N = 100; // Number of documents
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        printf("Usage: %s number_of_docs\n", argv[0]);
+        return 1;
+    }
+
+    int N = atoi(argv[1]); // Number of documents
 
     // Constants
     int D = 512; // Dimension of embedding vector
