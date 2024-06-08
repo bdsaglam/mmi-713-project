@@ -144,7 +144,7 @@ int main(int argc, char *argv[]) {
     int N = atoi(argv[1]); // Number of documents
 
     // Constants
-    int D = 512; // Dimension of embedding vector
+    int D = 384; // Dimension of embedding vector
     int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
 
@@ -187,7 +187,7 @@ int main(int argc, char *argv[]) {
     }
 
     // Sum over the last dim
-    dim3 blockDim(D);  // Ensure blockDim does not exceed 512
+    dim3 blockDim(D);
     dim3 gridDim(1, N, Q);
     size_t sharedMemSize = D * sizeof(float);
     sumOverLastDimKernel<<<gridDim, blockDim, sharedMemSize>>>(d_distances, d_agg_distances, D, N, Q);

@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     int N = atoi(argv[1]); // Number of documents
 
     // Constants
-    int D = 512; // Dimensionality
+    int D = 384; // Dimensionality
     int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
 

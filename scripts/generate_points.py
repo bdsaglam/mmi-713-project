@@ -5,7 +5,7 @@ import typer
 
 def main(
     n: int = typer.Option(default=1000),
-    dim: int = typer.Option(default=512),
+    dim: int = typer.Option(default=384),
     out: Path = typer.Option(...),
 ):
     points = np.random.rand(n, dim)
