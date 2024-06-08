@@ -11,8 +11,8 @@ build-gpu:
 
 build: build-cpu build-gpu
 
-generate-data:
-	python ./scripts/generate_points.py --n 1000 --dim 512 --out ./data/dataset-1K-512.txt
+test: build-cpu
+	bin/test_sorting_cpp
 
 run-cpu: build-cpu
 	bin/main_cpp $(ARGS)
@@ -20,5 +20,5 @@ run-cpu: build-cpu
 run-gpu: build-gpu
 	bin/main_cu $(ARGS)
 
-test: build-cpu
-	bin/test_sorting_cpp
+generate-data:
+	python ./scripts/generate_points.py --n 1000 --dim 512 --out ./data/dataset-1K-512.txt
