@@ -24,4 +24,4 @@ generate-data:
 	python ./scripts/generate_points.py --n 1000 --dim 512 --out ./data/dataset-1K-512.txt
 
 debug: 
-	nvcc src/main-kselect.cu -o bin/main-kselect_cu && bin/main-kselect_cu 100
+	nvcc src/main-kselect-debug.cu -o bin/main-kselect-debug_cu && bin/main-kselect-debug_cu 100
