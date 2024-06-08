@@ -1,7 +1,7 @@
 mkdir -p bin/
 nvcc src/main.cu -o bin/main_cu
 bin/main_cu 1000
-Elapsed time: 236.207000 ms
+Elapsed time: 227.139000 ms
 
 Verifying distance computation...
 

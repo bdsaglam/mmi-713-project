@@ -1,8 +1,11 @@
 mkdir -p bin/
-g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
-g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
-bin/main_cpp 100
-Elapsed time: 10.549000 ms
+nvcc src/main.cu -o bin/main_cu
+bin/main_cu 100
+Elapsed time: 231.302000 ms
+
+Verifying distance computation...
+
+Verifying sorting...
 ================================================================
 Query 0: Top 10 matching docs
 36 77 81 99 5 19 52 62 27 48 

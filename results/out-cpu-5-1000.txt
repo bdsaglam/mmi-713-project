@@ -1,0 +1,27 @@
+mkdir -p bin/
+g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
+g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
+bin/main_cpp 1000
+Elapsed time: 64.067000 ms
+================================================================
+Query 0: Top 10 matching docs
+490 631 716 835 930 193 33 332 846 784 
+Query 1: Top 10 matching docs
+663 657 913 967 251 156 63 987 613 691 
+Query 2: Top 10 matching docs
+249 562 859 106 750 286 637 565 817 476 
+Query 3: Top 10 matching docs
+814 711 575 699 524 560 192 703 240 896 
+Query 4: Top 10 matching docs
+181 902 729 948 934 624 854 628 224 699 
+Query 5: Top 10 matching docs
+454 868 486 654 115 56 950 812 369 504 
+Query 6: Top 10 matching docs
+862 612 608 379 401 455 159 713 251 332 
+Query 7: Top 10 matching docs
+453 115 47 40 540 529 815 485 165 527 
+Query 8: Top 10 matching docs
+294 769 722 880 87 441 865 649 246 314 
+Query 9: Top 10 matching docs
+791 967 842 436 640 109 657 725 174 864 
+================================================================
