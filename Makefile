@@ -12,7 +12,7 @@ build-gpu:
 
 build: build-cpu build-gpu
 
-test: build-cpu build-gpu
+test: build
 	bin/test_sorting_cpp
 	bin/test_knn_cuda_cu
 

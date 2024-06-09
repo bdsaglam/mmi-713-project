@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    int *h_indices = (int *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
+    int *h_indices = (int *)malloc(Q * N * sizeof(int )); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
     // srand(time(NULL));
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     cudaMalloc(&d_queries, Q * D * sizeof(float));
     cudaMalloc(&d_distances, Q * N * D * sizeof(float));
     cudaMalloc(&d_agg_distances, Q * N * sizeof(float));
-    cudaMalloc(&d_indices, Q * N * sizeof(long)); // Device memory for indices
+    cudaMalloc(&d_indices, Q * N * sizeof(int )); // Device memory for indices
 
     // Copy data from host to device
     cudaMemcpy(d_documents, h_documents, N * D * sizeof(float), cudaMemcpyHostToDevice);
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]) {
     kSelectKernel<<<kSelectBlocksPerGrid, kSelectThreadsPerBlock>>>(d_agg_distances, d_indices, Q, N, K);
     
     // Copy the sorted indices back to the host
-    cudaMemcpy(h_indices, d_indices, Q * N * sizeof(long), cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_indices, d_indices, Q * N * sizeof(int ), cudaMemcpyDeviceToHost);
 
     // Measure elapsed time
     clock_t end = clock();
