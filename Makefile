@@ -32,5 +32,4 @@ benchmark:
 	./benchmark.sh
 
 profile:
-	mv profiling-report.txt profiling-report.txt.bak
-	ncu --print-details all ./bin/main_cu > profiling-report.txt
+	ncu --print-details all ./bin/main_cu > "profiling-report-$(date +%s).txt"
