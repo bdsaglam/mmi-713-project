@@ -32,4 +32,6 @@ benchmark:
 	./benchmark.sh
 
 profile:
+	rm profiling-report.txt.bak
+	mv profiling-report.txt profiling-report.txt.bak
 	ncu --print-details all ./bin/main_cu > profiling-report.txt
