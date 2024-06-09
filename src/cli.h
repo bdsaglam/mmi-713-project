@@ -2,8 +2,8 @@
 #include <cstdlib>
 
 struct Params {
-    int N = 1000; // number of documents
-    int Q = 100; // number of queries
+    int N = 10000; // number of documents
+    int Q = 1000; // number of queries
 };
 
 void parseCommandLine(int argc, char* argv[], Params& params) {
