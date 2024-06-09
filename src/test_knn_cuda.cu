@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[]) {
     // Constants
-    int N = 1000; // Number of documents
+    long N = 1000; // Number of documents
     int D = 512; // Dimension of embedding vector
     int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     long *h_indices = (long *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
-    // srand(time(NULL));
+    srand(time(NULL));
     randomInit(h_documents, N, D);
     randomInit(h_queries, Q, D);
 
@@ -91,13 +91,17 @@ int main(int argc, char *argv[]) {
     printf("Elapsed time: %f ms\n", elapsed_time_ms);
     
     // Print results
+    printf("Results with k-select on GPU");
     printResults(h_indices, Q, N, K);
     
     // Print results
+    printf("Results with sorting on CPU");
     printResults(h_sorted_indices, Q, N, K);
 
+    int returnCode = 0;
     // Verification
 #if DEBUG
+
     // Allocate memory
     float *h_distances_cpu = (float *)malloc(Q * N * D * sizeof(float));
     float *h_agg_distances_cpu = (float *)malloc(Q * N * sizeof(float));
@@ -118,8 +122,10 @@ int main(int argc, char *argv[]) {
             }
         }
         float avgError = totalError / N;
-        if (avgError > 1e-3)
+        if (avgError > 1e-3) {
             printf("Avg error for query %d: %f\n", q, avgError);
+            returnCode = 1;
+        }
     }
 
     // Verify the distances by comparing the GPU and CPU results
@@ -131,34 +137,38 @@ int main(int argc, char *argv[]) {
             totalError += abs(h_agg_distances[index] - h_agg_distances_cpu[index]);
         }
         float avgError = totalError / N;
-        if (avgError > 1e-3)
+        if (avgError > 1e-3) {
             printf("Avg error for query %d: %f\n", q, avgError);
+            returnCode = 1;
+        }
     }
     
     // Verify the sorting by comparing the GPU and CPU results
     printf("\nVerifying sorting...\n");
     for (int q = 0; q < Q; ++q) {
-        float totalError = 0.0;
+        int errorCount = 0;
         for (int i = 0; i < N; ++i) {
             int index = q * N + i;
-            totalError += abs(h_sorted_indices[index] - h_sorted_indices_cpu[index]);
+            if ((h_sorted_indices[index] - h_sorted_indices_cpu[index]) != 0) errorCount++;
         }
-        float avgError = totalError / N;
-        if (avgError > 1e-3)
-            printf("Avg error for query %d: %f\n", q, avgError);
+        if (errorCount > 0) {
+            printf("Error count for query %d: %d\n", q, errorCount);
+            returnCode = 1;
+        }
     }
 
     // Verify the k-select by comparing the GPU and CPU results
     printf("\nVerifying k-select...\n");
     for (int q = 0; q < Q; ++q) {
-        float totalError = 0.0;
+        int errorCount = 0;
         for (int i = 0; i < K; ++i) {
             int index = q * N + i;
-            totalError += abs(h_indices[index] - h_sorted_indices_cpu[index]);
+            if ((h_indices[index] - h_sorted_indices_cpu[index]) != 0) errorCount++;
         }
-        float avgError = totalError / N;
-        if (avgError > 1e-3)
-            printf("Avg error for query %d: %f\n", q, avgError);
+        if (errorCount > 0) {
+            printf("Error count for query %d: %d\n", q, errorCount);
+            returnCode = 1;
+        }
     }
 
     // Deallocate memory
@@ -181,5 +191,5 @@ int main(int argc, char *argv[]) {
     free(h_indices);
     free(h_sorted_indices);
 
-    return 0;
+    return returnCode;
 }
