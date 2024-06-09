@@ -2,7 +2,7 @@
 #include <cstdlib>
 
 struct Params {
-    long N = 1000; // number of docs
+    long N = 1000; // number of documents
     long Q = 100; // number of queries
 };
 
