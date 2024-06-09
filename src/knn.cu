@@ -51,6 +51,8 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
     }
 }
 
+// Adapted from here
+// https://github.com/unlimblue/KNN_CUDA/blob/master/knn_cuda/csrc/cuda/knn.cu#L105
 /**
   * Gathers k-th smallest distances for each row of the distance matrix in the top.
   *
