@@ -1,0 +1,5 @@
+make[1]: Entering directory '/home/pc/Documents/baris/mmi-713-project'
+mkdir -p bin/
+nvcc src/main.cu -o bin/main_cu
+nvcc src/test_knn_cuda.cu -o bin/test_knn_cuda_cu
+bin/main_cu --N 10 --Q 10

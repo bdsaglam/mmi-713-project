@@ -18,8 +18,8 @@ for N in "${N_values[@]}"; do
         for i in {1..3}; do
             echo "$i. $N $Q"
             # Run the command with the current argument and redirect the output to a file
-            make run-gpu ARGS="--N $N --Q $q" > "results/out-gpu-${i}-$N-$q.txt"
-            make run-cpu ARGS="--N $N --Q $q" > "results/out-cpu-${i}-$N-$q.txt"
+            make run-gpu ARGS="--N $N --Q $q" > "results/out-gpu-$N-$q-${i}.txt"
+            make run-cpu ARGS="--N $N --Q $q" > "results/out-cpu-$N-$q-${i}.txt"
         done
     done
 done
