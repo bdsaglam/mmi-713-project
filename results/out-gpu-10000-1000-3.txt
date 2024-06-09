@@ -3,7 +3,7 @@ mkdir -p bin/
 nvcc src/main.cu -o bin/main_cu
 nvcc src/test_knn_cuda.cu -o bin/test_knn_cuda_cu
 bin/main_cu --N 10000 --Q 1000
-Elapsed time: 30555.237000 ms
+Elapsed time: 30532.986000 ms
 ================================================================
 Query 0: Top 10 matching docs
 0 0 0 0 0 0 0 0 0 0 

@@ -3,7 +3,7 @@ mkdir -p bin/
 g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
 g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
 bin/main_cpp --N 1000 --Q 1000
-Elapsed time: 5497.339000 ms
+Elapsed time: 5423.259000 ms
 ================================================================
 Query 0: Top 10 matching docs
 490 631 716 835 930 193 33 332 846 784 

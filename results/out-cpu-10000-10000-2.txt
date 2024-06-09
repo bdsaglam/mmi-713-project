@@ -1,0 +1,6 @@
+make[1]: Entering directory '/home/pc/Documents/baris/mmi-713-project'
+mkdir -p bin/
+g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
+g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
+bin/main_cpp --N 10000 --Q 10000
+make[1]: Leaving directory '/home/pc/Documents/baris/mmi-713-project'
