@@ -1,6 +1,5 @@
 
 #include <cuda_runtime.h>
-#include <algorithm>
 #include <cmath> // For fabsf
 
 // Kernel for computing distances for each point in documents and queries. 
