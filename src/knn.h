@@ -28,13 +28,13 @@ void sumOverLastDim(float *distances, float *output, int D, int N, int Q) {
     }
 }
 
-long* knn(float *documents, float *queries, int D, int N, int Q) {
+int* knn(float *documents, float *queries, int D, int N, int Q) {
     float *distances = (float *)malloc(Q * N * D * sizeof(float));
     float *results = (float *)malloc(Q * N * sizeof(float));
 
     computeL1Distance(documents, queries, distances, D, N, Q);
     sumOverLastDim(distances, results, D, N, Q);
-    long* sorted_indices = argsort(results, Q, N);
+    int* sorted_indices = argsort(results, Q, N);
 
     // Clean up memory
     free(distances);
