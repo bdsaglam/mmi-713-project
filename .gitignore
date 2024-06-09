@@ -1,5 +1,4 @@
 .venv
 bin/
 tmp/
-results/
-backfill.sh
+profiling-report*
