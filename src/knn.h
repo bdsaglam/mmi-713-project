@@ -1,13 +1,14 @@
 #include <cmath> // For fabsf
 
-void computeL1Distance(float *documents, float *queries, float *output, int D, int N, int Q) {
+void computeDistance(float *documents, float *queries, float *output, int D, int N, int Q) {
     for (int q = 0; q < Q; ++q) {
         for (int n = 0; n < N; ++n) {
             for (int d = 0; d < D; ++d) {
                 int docIndex = n * D + d;
                 int queryIndex = q * D + d;
                 int outputIndex = (q * N + n) * D + d;
-                output[outputIndex] = fabsf(queries[queryIndex] - documents[docIndex]);
+                float diff = queries[queryIndex] - documents[docIndex];
+                output[outputIndex] = diff * diff;
             }
         }
     }
@@ -32,7 +33,7 @@ int* knn(float *documents, float *queries, int D, int N, int Q) {
     float *distances = (float *)malloc(Q * N * D * sizeof(float));
     float *results = (float *)malloc(Q * N * sizeof(float));
 
-    computeL1Distance(documents, queries, distances, D, N, Q);
+    computeDistance(documents, queries, distances, D, N, Q);
     sumOverLastDim(distances, results, D, N, Q);
     int* sorted_indices = argsort(results, Q, N);
 

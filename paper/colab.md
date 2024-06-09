@@ -31,3 +31,5 @@ Sat Jun  8 10:41:07 2024
 
 # Profiling
 nvprof --print-gpu-trace ./bin/knn_cu --benchmark -numdevices=1 -i=0
+
+ncu --print-details all ./bin/main_cu > profiling-report.txt

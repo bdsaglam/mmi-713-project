@@ -9,7 +9,7 @@ mkdir -p tmp/results
 
 # Define the array of arguments
 N_values=(10 100 1000 10000)
-Q_values=(10 100 1000 10000)
+Q_values=(10 100)
 
 # Loop through each argument
 for N in "${N_values[@]}"; do

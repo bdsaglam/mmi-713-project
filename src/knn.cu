@@ -1,10 +1,8 @@
-
 #include <cuda_runtime.h>
-#include <cmath> // For fabsf
 
 // Kernel for computing distances for each point in documents and queries. 
 // Output dimensions: QxNxD
-__global__ void computeL1DistanceKernel(float *documents, float *queries, float *output, int D, int N, int Q) {
+__global__ void computeDistanceKernel(float *documents, float *queries, float *output, int D, int N, int Q) {
     // Calculate the thread's unique ID
     int qIndex = blockIdx.x * blockDim.x + threadIdx.x;
     int nIndex = blockIdx.y * blockDim.y + threadIdx.y;
@@ -15,7 +13,8 @@ __global__ void computeL1DistanceKernel(float *documents, float *queries, float 
         int docIndex = nIndex * D + dIndex;
         int queryIndex = qIndex * D + dIndex;
         int outputIndex = (qIndex * N + nIndex) * D + dIndex;
-        output[outputIndex] = fabsf(queries[queryIndex] - documents[docIndex]);
+        float diff = queries[queryIndex] - documents[docIndex];
+        output[outputIndex] = diff * diff;
     }
 }
 
@@ -136,11 +135,11 @@ void knnParallel(float *h_documents, float *h_queries, int *h_indices, int D, in
                    (N + threadsPerBlock.y - 1) / threadsPerBlock.y, 
                    (D + threadsPerBlock.z - 1) / threadsPerBlock.z);
 
-    // Compute L1 distances
-    computeL1DistanceKernel<<<numBlocks, threadsPerBlock>>>(d_documents, d_queries, d_distances, D, N, Q);
+    // Compute distances
+    computeDistanceKernel<<<numBlocks, threadsPerBlock>>>(d_documents, d_queries, d_distances, D, N, Q);
     cudaError_t err_dist = cudaGetLastError();
     if (err_dist != cudaSuccess) {
-        std::cerr << "Failed to launch computeL1DistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
+        std::cerr << "Failed to launch computeDistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
         return;
     }
 

@@ -52,11 +52,11 @@ int main(int argc, char *argv[]) {
                    (N + threadsPerBlock.y - 1) / threadsPerBlock.y, 
                    (D + threadsPerBlock.z - 1) / threadsPerBlock.z);
 
-    // Compute L1 distances
-    computeL1DistanceKernel<<<numBlocks, threadsPerBlock>>>(d_documents, d_queries, d_distances, D, N, Q);
+    // Compute distances
+    computeDistanceKernel<<<numBlocks, threadsPerBlock>>>(d_documents, d_queries, d_distances, D, N, Q);
     cudaError_t err_dist = cudaGetLastError();
     if (err_dist != cudaSuccess) {
-        std::cerr << "Failed to launch computeL1DistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
+        std::cerr << "Failed to launch computeDistanceKernel: " << cudaGetErrorString(err_dist) << std::endl;
         return -1;
     }
     // Copy the result back to host
@@ -107,7 +107,7 @@ int main(int argc, char *argv[]) {
     float *h_agg_distances_cpu = (float *)malloc(Q * N * sizeof(float));
 
     // Perform the same operations on the CPU
-    computeL1Distance(h_documents, h_queries, h_distances_cpu, D, N, Q);
+    computeDistance(h_documents, h_queries, h_distances_cpu, D, N, Q);
     sumOverLastDim(h_distances_cpu, h_agg_distances_cpu, D, N, Q);
     int * h_sorted_indices_cpu = argsort(h_agg_distances_cpu, Q, N);
     
