@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    int *h_indices = (int *)malloc(Q * N * sizeof(int )); // Indices array to store the output of kSelectKernel
+    int *h_indices = (int *)malloc(Q * N * sizeof(int)); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
     // srand(time(NULL));

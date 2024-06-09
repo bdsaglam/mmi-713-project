@@ -120,11 +120,11 @@ void knnParallel(float *h_documents, float *h_queries, int *h_indices, int D, in
     // Allocate device memory
     float *d_documents, *d_queries, *d_distances, *d_agg_distances;
     int *d_indices;
-    cudaMalloc(&d_documents, N * D * sizeof(float));
-    cudaMalloc(&d_queries, Q * D * sizeof(float));
-    cudaMalloc(&d_distances, Q * N * D * sizeof(float));
-    cudaMalloc(&d_agg_distances, Q * N * sizeof(float));
-    cudaMalloc(&d_indices, Q * N * sizeof(int )); // Device memory for indices
+    cudaMalloc(&d_documents, N * D * sizeof(float)); // Device memory for document vectors
+    cudaMalloc(&d_queries, Q * D * sizeof(float)); // Device memory for query vectors
+    cudaMalloc(&d_distances, Q * N * D * sizeof(float)); // Device memory for distances
+    cudaMalloc(&d_agg_distances, Q * N * sizeof(float)); // Device memory for aggregated distances
+    cudaMalloc(&d_indices, Q * N * sizeof(int)); // Device memory for indices
 
     // Copy data from host to device
     cudaMemcpy(d_documents, h_documents, N * D * sizeof(float), cudaMemcpyHostToDevice);
@@ -166,7 +166,7 @@ void knnParallel(float *h_documents, float *h_queries, int *h_indices, int D, in
     }
     
     // Copy the sorted indices back to the host
-    cudaMemcpy(h_indices, d_indices, Q * N * sizeof(int ), cudaMemcpyDeviceToHost);
+    cudaMemcpy(h_indices, d_indices, Q * N * sizeof(int), cudaMemcpyDeviceToHost);
 
     // Clean up memory
     cudaFree(d_documents);
