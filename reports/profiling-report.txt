@@ -1,26 +1,20 @@
-==PROF== Connected to process 23898 (/content/mmi-713-project/bin/main_cu)
-==PROF== Profiling "computeDistanceKernel" - 0: 0%....50%....100% - 8 passes
-==PROF== Profiling "sumOverLastDimKernel" - 1: 0%....50%....100% - 8 passes
-==PROF== Profiling "kSelectKernel" - 2: 0%....50%....100% - 8 passes
-Elapsed time: 978.044000 ms
-==PROF== Disconnected from process 23898
-[23898] main_cu@127.0.0.1
+[43399] main_cu@127.0.0.1
   computeDistanceKernel(float *, float *, float *, int, int, int) (13, 125, 64)x(8, 8, 8), Context 1, Stream 7, Device 0, CC 7.5
     Section: GPU Speed Of Light Throughput
     ----------------------- ------------- ------------
     Metric Name               Metric Unit Metric Value
     ----------------------- ------------- ------------
-    DRAM Frequency          cycle/nsecond         4.99
-    SM Frequency            cycle/usecond       583.76
-    Elapsed Cycles                  cycle    5,726,213
-    Memory Throughput                   %        44.62
-    DRAM Throughput                     %        32.80
-    Duration                      msecond         9.81
-    L1/TEX Cache Throughput             %        89.24
+    DRAM Frequency          cycle/nsecond         4.98
+    SM Frequency            cycle/usecond       583.64
+    Elapsed Cycles                  cycle    5,729,074
+    Memory Throughput                   %        44.60
+    DRAM Throughput                     %        32.78
+    Duration                      msecond         9.82
+    L1/TEX Cache Throughput             %        89.19
     Waves Per SM                                 1,300
-    L2 Cache Throughput                 %        38.36
-    SM Active Cycles                cycle 5,733,465.38
-    Compute (SM) Throughput             %         8.72
+    L2 Cache Throughput                 %        38.34
+    SM Active Cycles                cycle 5,717,491.50
+    Compute (SM) Throughput             %         8.71
     ----------------------- ------------- ------------
 
     GPU Throughput Chart
@@ -28,8 +22,8 @@ Elapsed time: 978.044000 ms
     ---------------- ----------- ------------
     Metric Name      Metric Unit Metric Value
     ---------------- ----------- ------------
-    Memory [%]                 %        44.62
-    Compute (SM) [%]           %         8.72
+    Memory [%]                 %        44.60
+    Compute (SM) [%]           %         8.71
     ---------------- ----------- ------------
 
     GPU Throughput Breakdown
@@ -37,10 +31,10 @@ Elapsed time: 978.044000 ms
     -------------------------------------- ----------- ------------
     Metric Name                            Metric Unit Metric Value
     -------------------------------------- ----------- ------------
-    SM: Inst Executed Pipe Lsu                       %         8.72
+    SM: Inst Executed Pipe Lsu                       %         8.71
     SM: Mio Pq Read Cycles Active                    %         5.66
-    SM: Inst Executed                                %         5.09
-    SM: Issue Active                                 %         5.09
+    SM: Inst Executed                                %         5.08
+    SM: Issue Active                                 %         5.08
     SM: Inst Executed Pipe Adu                       %         4.36
     SM: Mio Inst Issued                              %         4.36
     SM: Pipe Fma Cycles Active                       %         4.36
@@ -63,14 +57,14 @@ Elapsed time: 978.044000 ms
     ---------------------------------- ----------- ------------
     Metric Name                        Metric Unit Metric Value
     ---------------------------------- ----------- ------------
-    L1: M L1tex2xbar Req Cycles Active           %        44.62
-    L2: Xbar2lts Cycles Active                   %        38.36
-    L1: Data Pipe Lsu Wavefronts                 %        33.32
-    DRAM: Cycles Active                          %        32.80
-    DRAM: Dram Sectors                           %        23.96
-    L2: T Sectors                                %        19.44
-    L2: T Tag Requests                           %        19.44
-    L1: Lsuin Requests                           %         8.72
+    L1: M L1tex2xbar Req Cycles Active           %        44.60
+    L2: Xbar2lts Cycles Active                   %        38.34
+    L1: Data Pipe Lsu Wavefronts                 %        33.31
+    DRAM: Cycles Active                          %        32.78
+    DRAM: Dram Sectors                           %        23.94
+    L2: T Sectors                                %        19.43
+    L2: T Tag Requests                           %        19.43
+    L1: Lsuin Requests                           %         8.71
     L2: D Sectors                                %         7.01
     L1: Lsu Writeback Active                     %         4.41
     L2: D Sectors Fill Device                    %         2.44
@@ -206,7 +200,7 @@ Elapsed time: 978.044000 ms
 
     OPT   Estimated Speedup: 24.75%                                                                                     
           This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
-          theoretical (100.0%) and measured achieved occupancy (75.2%) can be the result of warp scheduling overheads   
+          theoretical (100.0%) and measured achieved occupancy (75.3%) can be the result of warp scheduling overheads   
           or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
           as well as across blocks of the same kernel. See the CUDA Best Practices Guide                                
           (https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html#occupancy) for more details on           
@@ -219,14 +213,14 @@ Elapsed time: 978.044000 ms
     ----------------------- ------------- ------------
     DRAM Frequency          cycle/nsecond         5.00
     SM Frequency            cycle/usecond       584.95
-    Elapsed Cycles                  cycle    3,381,571
+    Elapsed Cycles                  cycle    3,381,940
     Memory Throughput                   %        73.63
-    DRAM Throughput                     %        14.77
+    DRAM Throughput                     %        14.78
     Duration                      msecond         5.78
-    L1/TEX Cache Throughput             %        78.07
+    L1/TEX Cache Throughput             %        78.06
     Waves Per SM                                 1,250
     L2 Cache Throughput                 %         4.11
-    SM Active Cycles                cycle 3,379,938.77
+    SM Active Cycles                cycle 3,379,813.90
     Compute (SM) Throughput             %        73.63
     ----------------------- ------------- ------------
 
@@ -245,9 +239,9 @@ Elapsed time: 978.044000 ms
     Metric Name                            Metric Unit Metric Value
     -------------------------------------- ----------- ------------
     SM: Inst Executed Pipe Lsu                       %        73.63
-    SM: Mio Inst Issued                              %        34.01
-    SM: Inst Executed                                %        32.92
-    SM: Issue Active                                 %        32.92
+    SM: Mio Inst Issued                              %        34.00
+    SM: Inst Executed                                %        32.91
+    SM: Issue Active                                 %        32.91
     SM: Inst Executed Pipe Adu                       %        28.39
     SM: Pipe Alu Cycles Active                       %        23.69
     SM: Pipe Fma Cycles Active                       %         8.91
@@ -271,8 +265,8 @@ Elapsed time: 978.044000 ms
     Metric Name                        Metric Unit Metric Value
     ---------------------------------- ----------- ------------
     L1: Lsuin Requests                           %        73.63
-    L1: Data Pipe Lsu Wavefronts                 %        39.04
-    DRAM: Cycles Active                          %        14.77
+    L1: Data Pipe Lsu Wavefronts                 %        39.03
+    DRAM: Cycles Active                          %        14.78
     DRAM: Dram Sectors                           %        10.79
     L1: Lsu Writeback Active                     %         5.40
     L1: M Xbar2l1tex Read Sectors                %         4.73
@@ -417,16 +411,16 @@ Elapsed time: 978.044000 ms
     ----------------------- ------------- ------------
     Metric Name               Metric Unit Metric Value
     ----------------------- ------------- ------------
-    DRAM Frequency          cycle/nsecond         5.00
-    SM Frequency            cycle/usecond       585.15
-    Elapsed Cycles                  cycle      992,384
+    DRAM Frequency          cycle/nsecond         4.99
+    SM Frequency            cycle/usecond       584.78
+    Elapsed Cycles                  cycle      991,007
     Memory Throughput                   %         0.82
     DRAM Throughput                     %         0.36
-    Duration                      msecond         1.70
-    L1/TEX Cache Throughput             %        32.73
+    Duration                      msecond         1.69
+    L1/TEX Cache Throughput             %        32.62
     Waves Per SM                                  0.03
     L2 Cache Throughput                 %         0.70
-    SM Active Cycles                cycle    24,758.72
+    SM Active Cycles                cycle    24,849.92
     Compute (SM) Throughput             %         0.25
     ----------------------- ------------- ------------
 
@@ -476,7 +470,7 @@ Elapsed time: 978.044000 ms
     L2: T Sectors                                %         0.37
     L2: T Tag Requests                           %         0.37
     DRAM: Cycles Active                          %         0.36
-    DRAM: Dram Sectors                           %         0.26
+    DRAM: Dram Sectors                           %         0.27
     L1: Lsuin Requests                           %         0.25
     L1: Lsu Writeback Active                     %         0.18
     L2: D Sectors                                %         0.11
@@ -511,7 +505,7 @@ Elapsed time: 978.044000 ms
     Threads                                   thread           1,024
     Waves Per SM                                                0.03
     Theoretical Occupancy                          %             100
-    Achieved Occupancy                             %           10.72
+    Achieved Occupancy                             %           10.70
     -------------------------------- --------------- ---------------
 
     OPT   Estimated Speedup: 97.5%                                                                                      
@@ -532,8 +526,8 @@ Elapsed time: 978.044000 ms
     Block Limit Warps                     block            1
     Theoretical Active Warps per SM        warp           32
     Theoretical Occupancy                     %          100
-    Achieved Occupancy                        %        10.72
-    Achieved Active Warps Per SM           warp         3.43
+    Achieved Occupancy                        %        10.70
+    Achieved Active Warps Per SM           warp         3.42
     ------------------------------- ----------- ------------
 
     Table Name : Impact of Varying Register Count Per Thread
@@ -616,7 +610,7 @@ Elapsed time: 978.044000 ms
     Shared Memory Per Block             byte/block                              0
     ---------------------------------- ----------- ------------------------------
 
-    OPT   Estimated Speedup: 89.28%                                                                                     
+    OPT   Estimated Speedup: 89.3%                                                                                      
           This kernel's theoretical occupancy is not impacted by any block limit. The difference between calculated     
           theoretical (100.0%) and measured achieved occupancy (10.7%) can be the result of warp scheduling overheads   
           or workload imbalances during the kernel execution. Load imbalances can occur between warps within a block    
