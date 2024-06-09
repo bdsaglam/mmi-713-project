@@ -1,17 +1,22 @@
-2. Term Paper Guideline
+# Term Paper Guideline
 Suggested guidelines for writing your report are as follows:
+
 i. Abstract
 Try to include the following:
 • Motivation: one or two sentences on the problem and it significance;
 • Results: a short paragraph on approach and results;
 • Availability: a link to code, data, and supplementary materials, or a statement why this
 is not possible.
+
 ii. Motivation & Significance
 What is the problem and why is it important or significant?
+
 iii. Problem Statement
 Formal definition of the problem with any preliminary concepts.
+
 iv. Prior Work & Limitations
 What are the existing approaches, and their limitations?
+
 v. Theory/Algorithm
 • Discuss the main theoretical or algorithmic ideas of the paper;
 • Mention the main theorems (if any), the intuition behind those, and their practical
@@ -22,6 +27,7 @@ convey the main ideas. Move minute (but practically important) implementation
 details to the appendix;
 • Discuss why you chose certain paths, and discuss unfruitful paths that you discarded.
 In other words, give both the theoretical and/or algorithmic insights into your work.
+
 vi. Experiments or other Evidence of Success
 • Complete parameter settings and data descriptions should be provided (including any
 links to public resources);
@@ -32,13 +38,16 @@ links to public resources);
 additional results (say on minor parameter tuning of your method, etc).7 | P a g e
 APPLIED PARALLEL PROGRAMMING ON GPU
 ON GPU
+
 vii. Discussion and Future Work
 Describe insights you gained, the limitations and applicability of your work, and
 directions for future research. Every solution has limitations, which should be
 explicitly mentioned.
+
 viii. References
 Include the most relevant works, making sure all citations are complete (including
 editors, publishers, page numbers, etc.).
+
 ix. APPENDIX
 You should use the appendix for supporting details. For example, you may use it to
 convey detailed technical/practical aspects of your implementation. You may use the
