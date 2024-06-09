@@ -1,4 +1,0 @@
-mkdir -p bin/
-g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
-g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
-bin/main_cpp 10000

@@ -27,3 +27,6 @@ generate-data:
 
 debug: 
 	nvcc src/main-kselect-debug.cu -o bin/main-kselect-debug_cu && bin/main-kselect-debug_cu 100
+
+benchmark:
+	./benchmark.sh

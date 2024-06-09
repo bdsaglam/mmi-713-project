@@ -1,15 +1,25 @@
 #!/bin/bash
 
+min() {
+    printf "%s\n" "$@" | sort -g | head -n1
+}
+
+rm -rf results
 mkdir -p results
 
 # Define the array of arguments
-args=(10 100 1000 10000)
+N_values=(10 100 1000 10000)
+Q_values=(10 100 1000)
 
 # Loop through each argument
-for arg in "${args[@]}"; do
-    for i in {1..5}; do
-        # Run the command with the current argument and redirect the output to a file
-        make run-gpu ARGS="$arg" > "results/out-gpu-${i}-${arg}.txt"
-        make run-cpu ARGS="$arg" > "results/out-cpu-${i}-${arg}.txt"
+for N in "${N_values[@]}"; do
+    for Q in "${Q_values[@]}"; do
+        q="$(min $N $Q)"
+        for i in {1..3}; do
+            echo "$i. $N $Q"
+            # Run the command with the current argument and redirect the output to a file
+            make run-gpu ARGS="--N $N --Q $q" > "results/out-gpu-${i}-$N-$q.txt"
+            make run-cpu ARGS="--N $N --Q $q" > "results/out-cpu-${i}-$N-$q.txt"
+        done
     done
 done
