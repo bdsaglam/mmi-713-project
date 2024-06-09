@@ -130,7 +130,7 @@ void knnParallel(float *h_documents, float *h_queries, int *h_indices, int D, in
     cudaMemcpy(d_queries, h_queries, Q * D * sizeof(float), cudaMemcpyHostToDevice);
 
     // Configure grid and block sizes
-    dim3 threadsPerBlock(8, 8, 8);
+    dim3 threadsPerBlock(1, 2, 512);
     dim3 numBlocks((Q + threadsPerBlock.x - 1) / threadsPerBlock.x, 
                    (N + threadsPerBlock.y - 1) / threadsPerBlock.y, 
                    (D + threadsPerBlock.z - 1) / threadsPerBlock.z);
