@@ -30,3 +30,6 @@ debug:
 
 benchmark:
 	./benchmark.sh
+
+profile:
+	ncu --print-details all ./bin/main_cu > profiling-report.txt
