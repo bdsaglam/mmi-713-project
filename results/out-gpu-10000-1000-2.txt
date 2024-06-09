@@ -1,0 +1,2009 @@
+make[1]: Entering directory '/home/pc/Documents/baris/mmi-713-project'
+mkdir -p bin/
+nvcc src/main.cu -o bin/main_cu
+nvcc src/test_knn_cuda.cu -o bin/test_knn_cuda_cu
+bin/main_cu --N 10000 --Q 1000
+Elapsed time: 30599.940000 ms
+================================================================
+Query 0: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 1: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 2: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 3: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 4: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 5: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 6: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 7: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 8: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 9: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 10: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 11: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 12: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 13: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 14: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 15: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 16: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 17: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 18: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 19: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 20: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 21: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 22: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 23: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 24: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 25: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 26: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 27: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 28: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 29: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 30: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 31: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 32: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 33: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 34: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 35: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 36: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 37: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 38: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 39: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 40: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 41: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 42: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 43: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 44: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 45: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 46: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 47: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 48: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 49: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 50: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 51: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 52: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 53: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 54: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 55: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 56: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 57: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 58: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 59: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 60: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 61: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 62: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 63: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 64: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 65: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 66: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 67: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 68: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 69: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 70: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 71: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 72: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 73: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 74: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 75: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 76: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 77: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 78: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 79: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 80: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 81: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 82: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 83: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 84: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 85: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 86: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 87: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 88: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 89: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 90: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 91: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 92: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 93: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 94: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 95: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 96: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 97: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 98: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 99: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 100: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 101: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 102: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 103: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 104: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 105: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 106: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 107: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 108: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 109: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 110: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 111: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 112: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 113: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 114: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 115: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 116: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 117: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 118: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 119: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 120: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 121: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 122: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 123: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 124: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 125: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 126: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 127: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 128: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 129: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 130: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 131: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 132: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 133: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 134: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 135: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 136: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 137: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 138: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 139: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 140: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 141: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 142: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 143: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 144: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 145: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 146: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 147: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 148: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 149: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 150: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 151: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 152: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 153: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 154: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 155: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 156: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 157: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 158: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 159: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 160: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 161: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 162: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 163: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 164: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 165: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 166: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 167: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 168: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 169: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 170: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 171: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 172: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 173: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 174: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 175: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 176: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 177: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 178: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 179: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 180: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 181: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 182: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 183: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 184: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 185: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 186: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 187: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 188: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 189: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 190: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 191: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 192: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 193: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 194: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 195: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 196: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 197: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 198: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 199: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 200: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 201: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 202: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 203: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 204: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 205: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 206: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 207: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 208: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 209: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 210: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 211: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 212: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 213: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 214: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 215: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 216: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 217: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 218: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 219: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 220: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 221: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 222: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 223: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 224: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 225: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 226: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 227: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 228: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 229: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 230: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 231: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 232: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 233: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 234: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 235: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 236: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 237: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 238: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 239: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 240: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 241: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 242: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 243: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 244: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 245: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 246: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 247: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 248: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 249: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 250: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 251: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 252: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 253: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 254: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 255: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 256: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 257: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 258: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 259: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 260: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 261: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 262: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 263: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 264: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 265: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 266: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 267: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 268: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 269: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 270: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 271: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 272: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 273: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 274: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 275: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 276: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 277: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 278: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 279: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 280: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 281: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 282: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 283: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 284: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 285: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 286: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 287: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 288: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 289: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 290: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 291: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 292: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 293: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 294: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 295: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 296: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 297: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 298: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 299: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 300: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 301: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 302: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 303: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 304: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 305: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 306: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 307: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 308: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 309: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 310: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 311: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 312: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 313: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 314: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 315: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 316: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 317: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 318: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 319: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 320: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 321: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 322: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 323: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 324: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 325: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 326: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 327: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 328: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 329: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 330: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 331: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 332: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 333: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 334: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 335: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 336: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 337: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 338: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 339: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 340: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 341: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 342: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 343: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 344: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 345: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 346: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 347: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 348: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 349: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 350: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 351: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 352: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 353: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 354: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 355: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 356: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 357: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 358: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 359: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 360: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 361: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 362: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 363: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 364: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 365: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 366: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 367: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 368: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 369: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 370: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 371: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 372: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 373: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 374: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 375: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 376: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 377: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 378: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 379: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 380: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 381: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 382: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 383: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 384: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 385: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 386: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 387: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 388: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 389: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 390: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 391: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 392: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 393: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 394: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 395: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 396: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 397: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 398: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 399: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 400: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 401: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 402: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 403: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 404: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 405: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 406: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 407: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 408: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 409: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 410: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 411: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 412: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 413: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 414: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 415: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 416: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 417: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 418: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 419: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 420: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 421: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 422: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 423: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 424: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 425: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 426: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 427: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 428: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 429: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 430: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 431: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 432: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 433: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 434: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 435: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 436: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 437: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 438: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 439: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 440: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 441: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 442: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 443: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 444: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 445: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 446: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 447: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 448: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 449: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 450: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 451: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 452: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 453: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 454: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 455: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 456: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 457: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 458: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 459: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 460: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 461: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 462: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 463: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 464: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 465: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 466: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 467: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 468: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 469: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 470: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 471: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 472: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 473: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 474: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 475: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 476: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 477: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 478: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 479: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 480: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 481: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 482: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 483: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 484: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 485: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 486: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 487: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 488: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 489: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 490: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 491: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 492: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 493: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 494: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 495: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 496: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 497: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 498: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 499: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 500: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 501: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 502: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 503: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 504: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 505: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 506: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 507: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 508: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 509: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 510: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 511: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 512: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 513: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 514: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 515: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 516: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 517: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 518: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 519: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 520: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 521: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 522: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 523: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 524: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 525: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 526: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 527: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 528: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 529: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 530: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 531: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 532: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 533: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 534: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 535: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 536: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 537: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 538: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 539: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 540: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 541: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 542: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 543: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 544: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 545: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 546: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 547: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 548: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 549: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 550: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 551: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 552: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 553: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 554: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 555: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 556: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 557: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 558: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 559: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 560: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 561: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 562: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 563: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 564: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 565: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 566: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 567: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 568: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 569: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 570: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 571: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 572: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 573: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 574: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 575: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 576: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 577: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 578: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 579: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 580: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 581: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 582: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 583: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 584: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 585: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 586: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 587: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 588: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 589: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 590: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 591: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 592: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 593: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 594: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 595: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 596: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 597: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 598: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 599: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 600: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 601: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 602: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 603: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 604: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 605: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 606: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 607: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 608: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 609: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 610: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 611: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 612: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 613: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 614: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 615: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 616: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 617: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 618: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 619: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 620: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 621: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 622: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 623: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 624: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 625: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 626: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 627: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 628: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 629: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 630: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 631: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 632: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 633: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 634: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 635: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 636: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 637: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 638: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 639: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 640: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 641: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 642: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 643: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 644: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 645: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 646: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 647: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 648: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 649: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 650: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 651: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 652: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 653: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 654: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 655: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 656: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 657: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 658: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 659: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 660: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 661: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 662: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 663: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 664: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 665: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 666: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 667: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 668: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 669: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 670: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 671: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 672: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 673: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 674: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 675: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 676: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 677: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 678: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 679: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 680: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 681: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 682: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 683: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 684: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 685: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 686: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 687: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 688: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 689: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 690: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 691: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 692: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 693: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 694: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 695: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 696: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 697: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 698: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 699: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 700: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 701: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 702: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 703: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 704: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 705: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 706: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 707: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 708: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 709: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 710: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 711: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 712: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 713: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 714: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 715: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 716: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 717: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 718: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 719: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 720: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 721: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 722: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 723: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 724: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 725: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 726: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 727: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 728: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 729: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 730: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 731: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 732: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 733: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 734: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 735: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 736: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 737: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 738: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 739: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 740: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 741: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 742: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 743: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 744: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 745: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 746: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 747: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 748: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 749: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 750: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 751: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 752: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 753: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 754: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 755: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 756: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 757: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 758: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 759: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 760: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 761: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 762: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 763: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 764: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 765: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 766: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 767: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 768: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 769: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 770: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 771: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 772: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 773: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 774: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 775: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 776: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 777: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 778: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 779: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 780: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 781: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 782: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 783: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 784: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 785: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 786: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 787: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 788: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 789: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 790: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 791: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 792: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 793: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 794: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 795: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 796: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 797: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 798: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 799: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 800: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 801: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 802: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 803: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 804: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 805: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 806: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 807: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 808: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 809: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 810: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 811: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 812: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 813: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 814: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 815: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 816: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 817: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 818: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 819: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 820: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 821: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 822: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 823: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 824: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 825: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 826: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 827: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 828: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 829: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 830: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 831: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 832: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 833: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 834: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 835: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 836: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 837: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 838: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 839: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 840: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 841: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 842: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 843: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 844: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 845: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 846: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 847: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 848: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 849: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 850: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 851: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 852: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 853: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 854: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 855: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 856: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 857: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 858: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 859: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 860: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 861: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 862: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 863: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 864: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 865: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 866: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 867: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 868: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 869: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 870: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 871: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 872: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 873: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 874: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 875: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 876: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 877: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 878: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 879: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 880: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 881: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 882: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 883: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 884: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 885: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 886: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 887: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 888: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 889: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 890: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 891: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 892: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 893: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 894: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 895: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 896: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 897: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 898: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 899: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 900: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 901: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 902: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 903: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 904: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 905: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 906: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 907: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 908: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 909: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 910: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 911: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 912: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 913: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 914: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 915: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 916: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 917: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 918: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 919: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 920: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 921: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 922: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 923: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 924: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 925: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 926: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 927: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 928: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 929: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 930: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 931: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 932: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 933: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 934: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 935: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 936: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 937: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 938: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 939: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 940: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 941: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 942: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 943: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 944: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 945: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 946: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 947: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 948: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 949: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 950: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 951: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 952: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 953: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 954: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 955: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 956: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 957: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 958: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 959: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 960: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 961: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 962: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 963: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 964: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 965: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 966: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 967: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 968: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 969: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 970: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 971: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 972: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 973: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 974: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 975: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 976: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 977: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 978: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 979: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 980: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 981: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 982: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 983: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 984: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 985: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 986: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 987: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 988: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 989: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 990: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 991: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 992: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 993: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 994: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 995: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 996: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 997: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 998: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 999: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+================================================================
+make[1]: Leaving directory '/home/pc/Documents/baris/mmi-713-project'

@@ -11,8 +11,14 @@ Built on Wed_Nov_22_10:17:15_PST_2023
 Cuda compilation tools, release 12.3, V12.3.107
 Build cuda_12.3.r12.3/compiler.33567101_0
 
-> nvidia-smi --version
-NVIDIA-SMI version  : 555.42.02
-NVML version        : 555.42
-DRIVER version      : 555.42.02
-CUDA Version        : 12.5
+> nvidia-smi
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 555.42.02              Driver Version: 555.42.02      CUDA Version: 12.5     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:01:00.0 Off |                    0 |
+| N/A   32C    P0             47W /  300W |      17MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |

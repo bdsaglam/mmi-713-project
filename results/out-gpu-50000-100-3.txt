@@ -1,0 +1,207 @@
+mkdir -p bin/
+nvcc src/main.cu -o bin/main_cu
+nvcc src/test_knn_cuda.cu -o bin/test_knn_cuda_cu
+bin/main_cu --N 50000 --Q 100
+Elapsed time: 225.289000 ms
+================================================================
+Query 0: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 1: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 2: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 3: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 4: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 5: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 6: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 7: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 8: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 9: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 10: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 11: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 12: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 13: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 14: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 15: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 16: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 17: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 18: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 19: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 20: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 21: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 22: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 23: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 24: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 25: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 26: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 27: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 28: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 29: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 30: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 31: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 32: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 33: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 34: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 35: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 36: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 37: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 38: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 39: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 40: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 41: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 42: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 43: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 44: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 45: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 46: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 47: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 48: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 49: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 50: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 51: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 52: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 53: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 54: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 55: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 56: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 57: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 58: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 59: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 60: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 61: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 62: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 63: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 64: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 65: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 66: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 67: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 68: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 69: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 70: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 71: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 72: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 73: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 74: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 75: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 76: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 77: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 78: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 79: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 80: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 81: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 82: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 83: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 84: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 85: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 86: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 87: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 88: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 89: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 90: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 91: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 92: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 93: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 94: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 95: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 96: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 97: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 98: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+Query 99: Top 10 matching docs
+0 0 0 0 0 0 0 0 0 0 
+================================================================
