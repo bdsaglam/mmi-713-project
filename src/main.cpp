@@ -1,23 +1,18 @@
 #include <algorithm>
 #include <cmath> // For fabsf
 #include <iostream>
+#include "cli.h"
+#include "constants.h"
 #include "common.h"
 #include "sorting.h"
 #include "knn.h"
 
-
 int main(int argc, char *argv[]) {
-    if (argc != 2) {
-        printf("Usage: %s number_of_docs\n", argv[0]);
-        return 1;
-    }
+    Params params;
+    parseCommandLine(argc, argv, params);
 
-    int N = atoi(argv[1]); // Number of documents
-
-    // Constants
-    int D = 512; // Dimensionality
-    int Q = 10;  // Number of queries
-    int K = 10;  // Number of matches to return
+    int N = params.N;
+    int Q = params.Q;
 
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));

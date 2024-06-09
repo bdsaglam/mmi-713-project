@@ -1,0 +1,2 @@
+
+The CPU and GPU implementations are compared by execution time for different number of documents and number of queries. The embedding dimension is set as 512, and the number of documents to match (top-k) is set as 10.

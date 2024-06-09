@@ -3,6 +3,7 @@
 #include <math.h>
 #include <time.h>
 
+
 void randomInit(float* a, int n_rows, int n_cols) {
     for (int i = 0; i < n_rows; i++)
     {

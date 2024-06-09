@@ -2,7 +2,7 @@ mkdir -p bin/
 g++ src/main.cpp -o bin/main_cpp -lm -std=c++11
 g++ src/test_sorting.cpp -o bin/test_sorting_cpp -lm
 bin/main_cpp 10
-Elapsed time: 1.344000 ms
+Elapsed time: 64.515000 ms
 ================================================================
 Query 0: Top 10 matching docs
 9 2 6 0 7 8 1 4 3 5 
@@ -24,4 +24,1984 @@ Query 8: Top 10 matching docs
 7 0 8 1 2 5 9 4 3 6 
 Query 9: Top 10 matching docs
 7 9 6 3 1 0 8 5 2 4 
+Query 10: Top 10 matching docs
+0 8 7 1 9 5 2 6 4 3 
+Query 11: Top 10 matching docs
+4 2 0 5 1 7 9 8 6 3 
+Query 12: Top 10 matching docs
+7 1 9 0 2 4 8 6 3 5 
+Query 13: Top 10 matching docs
+7 9 1 8 4 5 6 2 0 3 
+Query 14: Top 10 matching docs
+8 0 3 6 4 9 5 7 1 2 
+Query 15: Top 10 matching docs
+0 2 9 4 7 5 1 8 6 3 
+Query 16: Top 10 matching docs
+1 0 7 9 4 2 8 3 5 6 
+Query 17: Top 10 matching docs
+4 9 8 1 0 2 7 6 5 3 
+Query 18: Top 10 matching docs
+4 0 7 6 1 9 8 2 5 3 
+Query 19: Top 10 matching docs
+0 8 1 6 7 2 5 3 9 4 
+Query 20: Top 10 matching docs
+1 3 2 0 5 4 6 9 7 8 
+Query 21: Top 10 matching docs
+5 2 8 9 4 1 0 3 6 7 
+Query 22: Top 10 matching docs
+4 6 8 2 5 1 7 3 9 0 
+Query 23: Top 10 matching docs
+1 9 4 8 6 0 2 5 3 7 
+Query 24: Top 10 matching docs
+6 4 5 7 0 1 2 9 8 3 
+Query 25: Top 10 matching docs
+0 4 2 7 9 6 8 5 3 1 
+Query 26: Top 10 matching docs
+8 5 6 0 9 1 7 4 2 3 
+Query 27: Top 10 matching docs
+4 9 0 8 2 7 1 5 6 3 
+Query 28: Top 10 matching docs
+7 6 2 0 1 4 3 9 8 5 
+Query 29: Top 10 matching docs
+5 8 0 9 4 3 1 7 2 6 
+Query 30: Top 10 matching docs
+4 7 8 6 5 2 1 3 0 9 
+Query 31: Top 10 matching docs
+6 8 2 4 7 1 5 0 9 3 
+Query 32: Top 10 matching docs
+4 9 7 2 8 0 5 6 1 3 
+Query 33: Top 10 matching docs
+7 2 0 9 6 1 5 8 3 4 
+Query 34: Top 10 matching docs
+2 0 5 6 1 4 9 8 3 7 
+Query 35: Top 10 matching docs
+0 4 7 1 9 2 3 8 5 6 
+Query 36: Top 10 matching docs
+0 8 1 4 7 9 2 6 3 5 
+Query 37: Top 10 matching docs
+1 7 9 2 6 5 8 0 4 3 
+Query 38: Top 10 matching docs
+2 9 8 7 6 5 0 4 1 3 
+Query 39: Top 10 matching docs
+2 3 1 4 8 0 5 7 9 6 
+Query 40: Top 10 matching docs
+9 8 2 5 3 4 1 7 0 6 
+Query 41: Top 10 matching docs
+2 4 1 7 5 9 0 8 3 6 
+Query 42: Top 10 matching docs
+6 7 1 2 8 4 0 5 9 3 
+Query 43: Top 10 matching docs
+2 7 4 8 6 9 1 0 5 3 
+Query 44: Top 10 matching docs
+4 0 9 1 2 6 7 8 5 3 
+Query 45: Top 10 matching docs
+6 4 9 0 8 5 3 2 7 1 
+Query 46: Top 10 matching docs
+4 8 7 1 6 9 5 2 3 0 
+Query 47: Top 10 matching docs
+7 1 8 4 2 6 3 0 9 5 
+Query 48: Top 10 matching docs
+0 7 4 1 9 8 3 2 5 6 
+Query 49: Top 10 matching docs
+1 2 7 4 6 8 9 0 5 3 
+Query 50: Top 10 matching docs
+9 2 7 3 8 4 5 0 6 1 
+Query 51: Top 10 matching docs
+7 1 4 0 9 8 5 2 6 3 
+Query 52: Top 10 matching docs
+8 0 4 6 7 2 5 1 3 9 
+Query 53: Top 10 matching docs
+1 8 4 7 0 5 6 2 9 3 
+Query 54: Top 10 matching docs
+0 2 6 7 8 1 4 9 5 3 
+Query 55: Top 10 matching docs
+4 0 7 5 1 2 6 9 8 3 
+Query 56: Top 10 matching docs
+2 0 7 6 5 4 9 1 8 3 
+Query 57: Top 10 matching docs
+4 0 1 6 7 2 9 5 3 8 
+Query 58: Top 10 matching docs
+7 8 5 3 4 9 6 0 2 1 
+Query 59: Top 10 matching docs
+1 4 3 2 7 9 6 0 5 8 
+Query 60: Top 10 matching docs
+7 8 4 2 9 1 0 6 5 3 
+Query 61: Top 10 matching docs
+7 8 2 5 6 9 1 4 0 3 
+Query 62: Top 10 matching docs
+7 0 4 1 2 9 8 5 6 3 
+Query 63: Top 10 matching docs
+9 2 6 8 0 7 4 5 3 1 
+Query 64: Top 10 matching docs
+1 5 6 7 0 9 4 8 2 3 
+Query 65: Top 10 matching docs
+8 0 7 4 2 1 9 3 5 6 
+Query 66: Top 10 matching docs
+4 8 0 2 7 9 6 1 3 5 
+Query 67: Top 10 matching docs
+0 9 3 4 2 6 7 1 8 5 
+Query 68: Top 10 matching docs
+4 1 7 9 6 5 3 2 8 0 
+Query 69: Top 10 matching docs
+0 1 6 4 7 2 9 5 8 3 
+Query 70: Top 10 matching docs
+4 0 8 9 3 1 2 5 7 6 
+Query 71: Top 10 matching docs
+9 8 2 4 7 5 6 1 0 3 
+Query 72: Top 10 matching docs
+2 6 1 0 8 9 3 7 5 4 
+Query 73: Top 10 matching docs
+4 0 9 2 6 8 1 3 7 5 
+Query 74: Top 10 matching docs
+3 7 9 6 0 8 5 4 1 2 
+Query 75: Top 10 matching docs
+9 1 0 6 8 2 5 3 7 4 
+Query 76: Top 10 matching docs
+9 4 0 5 7 2 1 3 8 6 
+Query 77: Top 10 matching docs
+1 7 4 9 2 0 5 3 8 6 
+Query 78: Top 10 matching docs
+8 7 5 2 0 4 6 1 3 9 
+Query 79: Top 10 matching docs
+7 0 1 2 5 4 8 9 6 3 
+Query 80: Top 10 matching docs
+3 2 4 9 1 7 0 8 5 6 
+Query 81: Top 10 matching docs
+5 1 8 4 9 3 0 2 7 6 
+Query 82: Top 10 matching docs
+8 5 9 4 7 1 0 2 6 3 
+Query 83: Top 10 matching docs
+8 0 6 2 7 1 5 4 3 9 
+Query 84: Top 10 matching docs
+5 4 6 9 2 7 8 3 1 0 
+Query 85: Top 10 matching docs
+2 9 0 7 4 6 8 1 5 3 
+Query 86: Top 10 matching docs
+0 5 4 9 6 7 1 2 8 3 
+Query 87: Top 10 matching docs
+2 4 7 0 9 8 1 5 6 3 
+Query 88: Top 10 matching docs
+7 0 8 1 5 3 4 2 9 6 
+Query 89: Top 10 matching docs
+1 5 0 3 4 7 9 2 8 6 
+Query 90: Top 10 matching docs
+5 8 9 1 4 2 0 6 3 7 
+Query 91: Top 10 matching docs
+9 6 2 0 1 8 5 7 4 3 
+Query 92: Top 10 matching docs
+4 7 6 1 2 0 8 3 9 5 
+Query 93: Top 10 matching docs
+5 2 0 4 1 7 8 9 6 3 
+Query 94: Top 10 matching docs
+7 4 8 1 0 5 2 6 3 9 
+Query 95: Top 10 matching docs
+7 0 4 3 2 5 6 8 9 1 
+Query 96: Top 10 matching docs
+0 1 4 2 8 5 6 7 9 3 
+Query 97: Top 10 matching docs
+2 4 8 7 0 5 9 1 3 6 
+Query 98: Top 10 matching docs
+1 7 4 2 5 0 9 8 3 6 
+Query 99: Top 10 matching docs
+6 5 8 9 2 7 4 3 0 1 
+Query 100: Top 10 matching docs
+1 7 0 9 2 8 3 6 4 5 
+Query 101: Top 10 matching docs
+5 8 4 6 7 1 2 0 3 9 
+Query 102: Top 10 matching docs
+4 0 2 6 7 9 8 1 3 5 
+Query 103: Top 10 matching docs
+2 0 1 7 3 8 9 5 4 6 
+Query 104: Top 10 matching docs
+4 8 7 0 2 5 9 6 3 1 
+Query 105: Top 10 matching docs
+1 4 6 7 3 8 0 2 9 5 
+Query 106: Top 10 matching docs
+7 5 4 6 0 8 9 1 2 3 
+Query 107: Top 10 matching docs
+6 1 7 9 2 8 4 0 5 3 
+Query 108: Top 10 matching docs
+0 8 4 7 5 2 1 6 3 9 
+Query 109: Top 10 matching docs
+2 8 1 9 7 4 5 3 0 6 
+Query 110: Top 10 matching docs
+6 7 2 9 4 5 8 1 3 0 
+Query 111: Top 10 matching docs
+4 2 6 7 9 5 0 8 3 1 
+Query 112: Top 10 matching docs
+8 2 5 0 1 4 7 9 3 6 
+Query 113: Top 10 matching docs
+4 0 2 5 7 6 9 8 1 3 
+Query 114: Top 10 matching docs
+6 1 4 2 9 7 5 0 3 8 
+Query 115: Top 10 matching docs
+4 2 1 9 8 7 0 5 3 6 
+Query 116: Top 10 matching docs
+0 4 7 9 5 1 2 6 8 3 
+Query 117: Top 10 matching docs
+7 6 4 8 1 2 0 5 9 3 
+Query 118: Top 10 matching docs
+5 7 2 1 6 0 9 4 3 8 
+Query 119: Top 10 matching docs
+8 4 2 0 9 7 5 1 6 3 
+Query 120: Top 10 matching docs
+7 8 2 6 9 0 4 1 3 5 
+Query 121: Top 10 matching docs
+4 6 2 1 7 0 8 9 3 5 
+Query 122: Top 10 matching docs
+9 4 2 1 7 8 3 0 5 6 
+Query 123: Top 10 matching docs
+0 2 4 7 8 6 9 3 5 1 
+Query 124: Top 10 matching docs
+0 7 4 1 3 2 9 6 5 8 
+Query 125: Top 10 matching docs
+9 4 7 2 1 8 0 6 5 3 
+Query 126: Top 10 matching docs
+7 4 9 1 3 5 8 2 0 6 
+Query 127: Top 10 matching docs
+4 9 8 1 7 5 3 2 6 0 
+Query 128: Top 10 matching docs
+4 6 9 2 0 7 1 3 8 5 
+Query 129: Top 10 matching docs
+4 8 0 9 2 1 5 7 6 3 
+Query 130: Top 10 matching docs
+7 8 1 4 2 0 5 3 6 9 
+Query 131: Top 10 matching docs
+5 1 8 6 0 7 3 4 9 2 
+Query 132: Top 10 matching docs
+6 8 3 2 1 0 5 9 7 4 
+Query 133: Top 10 matching docs
+4 9 2 0 7 1 5 8 6 3 
+Query 134: Top 10 matching docs
+4 7 8 2 9 6 1 0 5 3 
+Query 135: Top 10 matching docs
+9 7 6 0 2 5 1 3 4 8 
+Query 136: Top 10 matching docs
+1 8 2 7 9 6 0 4 5 3 
+Query 137: Top 10 matching docs
+1 2 0 6 7 9 4 8 5 3 
+Query 138: Top 10 matching docs
+4 7 0 5 6 1 2 3 8 9 
+Query 139: Top 10 matching docs
+1 4 9 2 0 7 8 5 6 3 
+Query 140: Top 10 matching docs
+0 6 9 2 4 1 8 3 7 5 
+Query 141: Top 10 matching docs
+4 7 0 2 8 1 5 9 6 3 
+Query 142: Top 10 matching docs
+4 6 5 8 1 7 0 9 2 3 
+Query 143: Top 10 matching docs
+8 4 7 1 6 0 5 9 2 3 
+Query 144: Top 10 matching docs
+4 1 0 5 8 2 9 7 3 6 
+Query 145: Top 10 matching docs
+7 2 1 0 6 5 9 8 4 3 
+Query 146: Top 10 matching docs
+1 7 9 4 2 6 8 0 5 3 
+Query 147: Top 10 matching docs
+2 4 1 9 8 7 6 5 0 3 
+Query 148: Top 10 matching docs
+0 4 9 1 8 6 7 2 5 3 
+Query 149: Top 10 matching docs
+0 4 8 5 7 6 9 1 2 3 
+Query 150: Top 10 matching docs
+4 6 9 0 7 1 3 8 2 5 
+Query 151: Top 10 matching docs
+4 7 3 6 5 1 9 8 0 2 
+Query 152: Top 10 matching docs
+8 5 0 2 6 3 1 4 7 9 
+Query 153: Top 10 matching docs
+7 8 2 1 4 9 0 5 6 3 
+Query 154: Top 10 matching docs
+8 1 0 5 3 7 4 2 9 6 
+Query 155: Top 10 matching docs
+1 8 7 0 4 6 9 2 5 3 
+Query 156: Top 10 matching docs
+1 8 6 9 2 0 3 7 5 4 
+Query 157: Top 10 matching docs
+2 0 6 5 7 1 3 4 9 8 
+Query 158: Top 10 matching docs
+1 0 7 9 8 2 3 4 5 6 
+Query 159: Top 10 matching docs
+1 2 0 8 3 7 6 4 5 9 
+Query 160: Top 10 matching docs
+9 4 0 7 6 8 5 2 3 1 
+Query 161: Top 10 matching docs
+0 9 6 8 5 2 4 7 1 3 
+Query 162: Top 10 matching docs
+7 4 2 6 1 5 8 3 9 0 
+Query 163: Top 10 matching docs
+0 4 9 5 3 2 6 1 7 8 
+Query 164: Top 10 matching docs
+0 1 6 2 7 4 8 9 5 3 
+Query 165: Top 10 matching docs
+6 5 9 0 1 4 2 7 8 3 
+Query 166: Top 10 matching docs
+9 7 5 4 1 6 2 3 8 0 
+Query 167: Top 10 matching docs
+0 6 4 5 2 9 7 1 8 3 
+Query 168: Top 10 matching docs
+1 5 4 9 2 0 8 6 3 7 
+Query 169: Top 10 matching docs
+7 1 4 8 9 5 0 2 3 6 
+Query 170: Top 10 matching docs
+2 7 9 6 1 8 0 4 5 3 
+Query 171: Top 10 matching docs
+4 2 9 0 3 5 1 7 8 6 
+Query 172: Top 10 matching docs
+1 7 5 9 3 0 2 4 8 6 
+Query 173: Top 10 matching docs
+0 2 9 6 8 1 4 7 3 5 
+Query 174: Top 10 matching docs
+2 4 0 1 5 6 9 7 8 3 
+Query 175: Top 10 matching docs
+4 6 7 0 9 8 1 2 3 5 
+Query 176: Top 10 matching docs
+2 8 4 0 9 6 3 5 7 1 
+Query 177: Top 10 matching docs
+7 4 0 9 5 8 3 2 1 6 
+Query 178: Top 10 matching docs
+0 7 2 1 5 6 4 8 3 9 
+Query 179: Top 10 matching docs
+5 4 0 8 1 3 9 6 2 7 
+Query 180: Top 10 matching docs
+3 9 7 4 5 2 1 8 6 0 
+Query 181: Top 10 matching docs
+0 8 7 1 5 9 6 2 3 4 
+Query 182: Top 10 matching docs
+1 0 4 2 9 5 7 3 6 8 
+Query 183: Top 10 matching docs
+0 4 8 9 7 6 2 3 5 1 
+Query 184: Top 10 matching docs
+9 0 2 5 6 8 7 3 1 4 
+Query 185: Top 10 matching docs
+8 4 1 7 5 0 9 6 2 3 
+Query 186: Top 10 matching docs
+5 0 9 7 1 4 6 2 8 3 
+Query 187: Top 10 matching docs
+0 4 7 9 6 8 3 2 1 5 
+Query 188: Top 10 matching docs
+0 4 7 8 5 9 2 6 1 3 
+Query 189: Top 10 matching docs
+9 6 1 7 3 2 5 0 8 4 
+Query 190: Top 10 matching docs
+9 5 1 8 6 0 2 7 4 3 
+Query 191: Top 10 matching docs
+2 0 6 9 7 8 1 4 5 3 
+Query 192: Top 10 matching docs
+7 6 4 2 8 9 3 5 1 0 
+Query 193: Top 10 matching docs
+8 1 0 4 7 6 9 5 2 3 
+Query 194: Top 10 matching docs
+1 5 7 8 4 9 0 2 3 6 
+Query 195: Top 10 matching docs
+8 1 9 2 3 4 6 7 5 0 
+Query 196: Top 10 matching docs
+0 1 8 3 7 6 2 4 9 5 
+Query 197: Top 10 matching docs
+7 0 2 9 4 8 5 6 1 3 
+Query 198: Top 10 matching docs
+1 6 8 9 2 0 3 7 5 4 
+Query 199: Top 10 matching docs
+4 1 9 7 8 5 0 6 2 3 
+Query 200: Top 10 matching docs
+1 3 4 7 2 0 5 9 6 8 
+Query 201: Top 10 matching docs
+1 4 2 7 6 9 3 8 0 5 
+Query 202: Top 10 matching docs
+0 4 6 2 8 3 1 9 7 5 
+Query 203: Top 10 matching docs
+7 2 8 6 1 3 9 4 0 5 
+Query 204: Top 10 matching docs
+8 1 9 6 7 2 3 5 0 4 
+Query 205: Top 10 matching docs
+2 1 6 3 5 7 8 4 0 9 
+Query 206: Top 10 matching docs
+9 8 4 0 1 7 3 6 5 2 
+Query 207: Top 10 matching docs
+4 1 5 8 3 7 9 0 2 6 
+Query 208: Top 10 matching docs
+4 1 7 0 2 8 9 3 5 6 
+Query 209: Top 10 matching docs
+0 9 5 7 1 6 8 3 2 4 
+Query 210: Top 10 matching docs
+4 2 5 8 1 7 3 9 0 6 
+Query 211: Top 10 matching docs
+2 8 3 1 5 4 9 7 6 0 
+Query 212: Top 10 matching docs
+2 1 7 9 8 4 3 0 6 5 
+Query 213: Top 10 matching docs
+9 8 0 6 1 3 4 2 7 5 
+Query 214: Top 10 matching docs
+0 2 3 9 7 1 4 8 5 6 
+Query 215: Top 10 matching docs
+5 8 7 4 6 0 3 9 2 1 
+Query 216: Top 10 matching docs
+7 0 2 9 4 1 5 3 8 6 
+Query 217: Top 10 matching docs
+2 1 7 4 6 0 8 3 9 5 
+Query 218: Top 10 matching docs
+5 7 2 6 0 4 1 9 8 3 
+Query 219: Top 10 matching docs
+7 4 2 8 0 9 1 3 6 5 
+Query 220: Top 10 matching docs
+1 6 9 0 3 7 4 2 8 5 
+Query 221: Top 10 matching docs
+4 1 3 9 5 7 2 0 6 8 
+Query 222: Top 10 matching docs
+0 7 1 2 8 3 4 9 6 5 
+Query 223: Top 10 matching docs
+9 6 2 0 1 7 4 5 8 3 
+Query 224: Top 10 matching docs
+1 8 9 0 4 6 3 2 5 7 
+Query 225: Top 10 matching docs
+1 7 5 2 9 0 4 8 6 3 
+Query 226: Top 10 matching docs
+7 2 8 4 6 0 1 9 5 3 
+Query 227: Top 10 matching docs
+7 4 8 1 5 2 9 6 0 3 
+Query 228: Top 10 matching docs
+1 7 2 3 6 0 9 4 8 5 
+Query 229: Top 10 matching docs
+2 9 7 4 5 1 6 0 8 3 
+Query 230: Top 10 matching docs
+5 0 7 9 8 6 4 2 1 3 
+Query 231: Top 10 matching docs
+8 1 5 9 4 6 2 0 7 3 
+Query 232: Top 10 matching docs
+4 7 5 8 2 0 3 1 6 9 
+Query 233: Top 10 matching docs
+3 1 9 2 0 4 7 8 6 5 
+Query 234: Top 10 matching docs
+4 0 1 7 9 8 2 6 5 3 
+Query 235: Top 10 matching docs
+0 1 7 4 5 9 6 2 8 3 
+Query 236: Top 10 matching docs
+4 9 6 0 7 2 8 5 1 3 
+Query 237: Top 10 matching docs
+7 1 9 8 4 0 6 5 2 3 
+Query 238: Top 10 matching docs
+4 7 1 0 2 9 3 5 8 6 
+Query 239: Top 10 matching docs
+5 6 9 1 7 2 0 8 4 3 
+Query 240: Top 10 matching docs
+2 9 7 0 4 1 5 8 6 3 
+Query 241: Top 10 matching docs
+1 2 0 7 4 8 5 9 3 6 
+Query 242: Top 10 matching docs
+1 7 8 9 3 2 4 6 5 0 
+Query 243: Top 10 matching docs
+8 3 1 2 6 7 9 4 5 0 
+Query 244: Top 10 matching docs
+5 9 2 8 0 7 3 4 6 1 
+Query 245: Top 10 matching docs
+0 7 5 6 2 4 8 3 9 1 
+Query 246: Top 10 matching docs
+9 7 2 4 1 5 8 0 6 3 
+Query 247: Top 10 matching docs
+1 2 5 0 9 4 6 8 7 3 
+Query 248: Top 10 matching docs
+0 4 8 1 7 3 5 2 6 9 
+Query 249: Top 10 matching docs
+7 8 1 0 9 2 5 6 3 4 
+Query 250: Top 10 matching docs
+8 1 4 2 3 9 7 0 6 5 
+Query 251: Top 10 matching docs
+7 0 4 2 9 5 3 1 6 8 
+Query 252: Top 10 matching docs
+9 8 0 4 5 1 7 6 3 2 
+Query 253: Top 10 matching docs
+1 3 4 9 2 8 6 7 0 5 
+Query 254: Top 10 matching docs
+8 2 1 6 4 9 0 3 5 7 
+Query 255: Top 10 matching docs
+8 4 7 9 1 0 5 3 2 6 
+Query 256: Top 10 matching docs
+4 0 8 9 1 6 7 2 5 3 
+Query 257: Top 10 matching docs
+2 4 8 0 5 1 3 9 7 6 
+Query 258: Top 10 matching docs
+2 6 1 5 3 7 9 0 4 8 
+Query 259: Top 10 matching docs
+1 6 9 7 0 4 5 2 8 3 
+Query 260: Top 10 matching docs
+6 7 9 1 0 2 8 4 5 3 
+Query 261: Top 10 matching docs
+7 2 4 0 1 9 8 6 5 3 
+Query 262: Top 10 matching docs
+5 0 7 2 1 9 4 3 6 8 
+Query 263: Top 10 matching docs
+9 4 7 0 6 5 8 2 3 1 
+Query 264: Top 10 matching docs
+9 2 7 5 4 6 8 1 3 0 
+Query 265: Top 10 matching docs
+4 9 6 5 2 0 8 7 1 3 
+Query 266: Top 10 matching docs
+8 0 4 3 7 6 9 5 2 1 
+Query 267: Top 10 matching docs
+0 9 4 5 2 8 7 1 3 6 
+Query 268: Top 10 matching docs
+1 0 6 7 9 2 4 8 3 5 
+Query 269: Top 10 matching docs
+4 9 1 2 7 8 5 6 0 3 
+Query 270: Top 10 matching docs
+4 8 0 5 7 3 9 2 6 1 
+Query 271: Top 10 matching docs
+8 1 4 9 5 0 3 2 6 7 
+Query 272: Top 10 matching docs
+4 9 1 0 2 8 3 6 7 5 
+Query 273: Top 10 matching docs
+7 8 0 1 2 9 5 3 4 6 
+Query 274: Top 10 matching docs
+7 8 2 5 6 1 4 9 0 3 
+Query 275: Top 10 matching docs
+7 9 2 4 0 8 1 6 3 5 
+Query 276: Top 10 matching docs
+9 6 2 4 7 5 1 3 0 8 
+Query 277: Top 10 matching docs
+4 7 5 8 3 0 1 9 6 2 
+Query 278: Top 10 matching docs
+4 7 1 3 0 2 9 8 6 5 
+Query 279: Top 10 matching docs
+9 0 1 8 7 2 6 4 5 3 
+Query 280: Top 10 matching docs
+6 0 1 5 7 4 2 3 9 8 
+Query 281: Top 10 matching docs
+9 1 0 4 7 2 5 8 6 3 
+Query 282: Top 10 matching docs
+9 7 2 6 8 5 4 0 1 3 
+Query 283: Top 10 matching docs
+8 1 5 9 0 7 2 4 3 6 
+Query 284: Top 10 matching docs
+8 6 9 7 5 1 4 3 2 0 
+Query 285: Top 10 matching docs
+0 1 2 7 8 4 6 9 5 3 
+Query 286: Top 10 matching docs
+5 0 2 8 6 7 9 4 1 3 
+Query 287: Top 10 matching docs
+4 9 2 1 0 3 7 5 8 6 
+Query 288: Top 10 matching docs
+3 4 2 5 0 1 6 8 7 9 
+Query 289: Top 10 matching docs
+6 1 4 2 9 5 7 8 0 3 
+Query 290: Top 10 matching docs
+5 3 4 8 0 6 2 1 9 7 
+Query 291: Top 10 matching docs
+0 7 6 8 5 2 4 1 9 3 
+Query 292: Top 10 matching docs
+7 2 0 1 5 9 4 8 6 3 
+Query 293: Top 10 matching docs
+1 4 8 0 5 2 9 6 7 3 
+Query 294: Top 10 matching docs
+6 7 8 1 9 5 3 0 4 2 
+Query 295: Top 10 matching docs
+5 0 9 7 2 8 3 1 4 6 
+Query 296: Top 10 matching docs
+1 7 2 9 0 4 6 8 5 3 
+Query 297: Top 10 matching docs
+9 2 0 4 6 1 7 8 5 3 
+Query 298: Top 10 matching docs
+7 9 0 4 1 8 2 3 5 6 
+Query 299: Top 10 matching docs
+8 5 1 0 3 4 7 2 9 6 
+Query 300: Top 10 matching docs
+6 0 2 5 8 9 1 3 4 7 
+Query 301: Top 10 matching docs
+4 5 7 6 0 2 1 9 8 3 
+Query 302: Top 10 matching docs
+2 7 4 5 8 0 9 3 1 6 
+Query 303: Top 10 matching docs
+7 5 8 1 6 2 4 0 3 9 
+Query 304: Top 10 matching docs
+0 8 5 1 9 7 3 2 4 6 
+Query 305: Top 10 matching docs
+9 5 0 1 4 2 8 3 7 6 
+Query 306: Top 10 matching docs
+2 1 7 9 4 0 6 3 5 8 
+Query 307: Top 10 matching docs
+4 0 7 8 3 2 6 5 1 9 
+Query 308: Top 10 matching docs
+9 4 5 2 0 1 6 3 7 8 
+Query 309: Top 10 matching docs
+0 4 6 2 7 9 8 5 1 3 
+Query 310: Top 10 matching docs
+0 9 7 2 6 8 4 3 5 1 
+Query 311: Top 10 matching docs
+0 9 4 7 5 6 8 1 3 2 
+Query 312: Top 10 matching docs
+8 0 2 4 1 9 7 3 6 5 
+Query 313: Top 10 matching docs
+0 5 4 2 8 7 9 6 1 3 
+Query 314: Top 10 matching docs
+1 3 4 8 0 9 2 6 7 5 
+Query 315: Top 10 matching docs
+5 9 7 1 2 4 8 3 6 0 
+Query 316: Top 10 matching docs
+8 0 2 1 7 4 6 9 5 3 
+Query 317: Top 10 matching docs
+7 4 2 1 8 9 6 0 5 3 
+Query 318: Top 10 matching docs
+8 5 9 0 1 6 4 7 3 2 
+Query 319: Top 10 matching docs
+7 0 1 2 9 5 8 4 6 3 
+Query 320: Top 10 matching docs
+4 6 9 5 7 0 1 2 8 3 
+Query 321: Top 10 matching docs
+7 5 0 2 9 4 3 8 1 6 
+Query 322: Top 10 matching docs
+7 6 0 9 2 4 1 3 8 5 
+Query 323: Top 10 matching docs
+2 9 4 1 5 8 0 6 7 3 
+Query 324: Top 10 matching docs
+0 7 8 4 2 9 1 6 3 5 
+Query 325: Top 10 matching docs
+8 0 4 2 6 7 3 9 5 1 
+Query 326: Top 10 matching docs
+0 5 8 9 7 1 2 4 3 6 
+Query 327: Top 10 matching docs
+6 1 0 2 8 5 7 9 3 4 
+Query 328: Top 10 matching docs
+8 1 0 2 7 9 4 3 6 5 
+Query 329: Top 10 matching docs
+4 8 6 0 3 1 5 9 2 7 
+Query 330: Top 10 matching docs
+4 0 1 9 5 3 7 8 2 6 
+Query 331: Top 10 matching docs
+7 4 0 1 6 9 2 3 8 5 
+Query 332: Top 10 matching docs
+9 1 4 0 3 5 6 2 8 7 
+Query 333: Top 10 matching docs
+5 0 9 2 4 6 8 1 3 7 
+Query 334: Top 10 matching docs
+4 9 8 0 1 6 5 2 3 7 
+Query 335: Top 10 matching docs
+1 5 9 2 8 4 3 7 6 0 
+Query 336: Top 10 matching docs
+0 9 6 5 8 3 7 2 1 4 
+Query 337: Top 10 matching docs
+1 2 9 8 4 3 6 7 5 0 
+Query 338: Top 10 matching docs
+2 6 8 7 4 0 9 1 3 5 
+Query 339: Top 10 matching docs
+7 4 8 5 2 6 9 1 0 3 
+Query 340: Top 10 matching docs
+7 8 3 1 0 2 4 9 5 6 
+Query 341: Top 10 matching docs
+4 8 7 1 0 6 2 9 5 3 
+Query 342: Top 10 matching docs
+9 4 2 1 5 3 0 6 8 7 
+Query 343: Top 10 matching docs
+4 8 6 0 9 2 1 7 5 3 
+Query 344: Top 10 matching docs
+2 4 9 6 5 1 0 3 7 8 
+Query 345: Top 10 matching docs
+7 0 1 6 3 5 8 4 2 9 
+Query 346: Top 10 matching docs
+4 8 7 0 6 9 1 2 3 5 
+Query 347: Top 10 matching docs
+0 3 4 1 8 7 9 2 6 5 
+Query 348: Top 10 matching docs
+7 0 3 6 5 4 2 8 1 9 
+Query 349: Top 10 matching docs
+0 2 8 4 1 5 9 3 7 6 
+Query 350: Top 10 matching docs
+0 7 9 5 3 4 6 2 1 8 
+Query 351: Top 10 matching docs
+9 2 1 7 4 8 6 0 3 5 
+Query 352: Top 10 matching docs
+3 9 1 4 8 5 0 6 7 2 
+Query 353: Top 10 matching docs
+7 1 6 5 0 4 2 8 9 3 
+Query 354: Top 10 matching docs
+0 7 1 6 4 9 8 3 2 5 
+Query 355: Top 10 matching docs
+0 7 4 8 2 1 5 9 3 6 
+Query 356: Top 10 matching docs
+4 9 0 8 2 7 5 1 6 3 
+Query 357: Top 10 matching docs
+0 7 3 8 1 4 9 6 2 5 
+Query 358: Top 10 matching docs
+4 7 6 8 9 5 1 0 2 3 
+Query 359: Top 10 matching docs
+8 2 9 1 4 7 6 0 5 3 
+Query 360: Top 10 matching docs
+4 7 6 5 2 8 3 9 1 0 
+Query 361: Top 10 matching docs
+0 7 8 4 6 3 9 5 1 2 
+Query 362: Top 10 matching docs
+6 4 7 8 9 1 2 0 5 3 
+Query 363: Top 10 matching docs
+5 9 1 7 3 0 6 4 8 2 
+Query 364: Top 10 matching docs
+4 1 8 6 7 9 3 5 2 0 
+Query 365: Top 10 matching docs
+7 4 6 8 5 1 0 9 3 2 
+Query 366: Top 10 matching docs
+7 9 4 0 8 2 1 3 5 6 
+Query 367: Top 10 matching docs
+6 1 7 8 3 4 2 5 9 0 
+Query 368: Top 10 matching docs
+4 7 0 8 2 5 9 3 1 6 
+Query 369: Top 10 matching docs
+9 5 7 6 2 4 1 3 8 0 
+Query 370: Top 10 matching docs
+7 4 1 5 9 2 3 0 8 6 
+Query 371: Top 10 matching docs
+6 1 9 4 3 8 5 0 7 2 
+Query 372: Top 10 matching docs
+5 3 1 4 8 2 6 7 0 9 
+Query 373: Top 10 matching docs
+7 1 9 4 5 0 6 8 2 3 
+Query 374: Top 10 matching docs
+7 4 1 5 8 3 9 6 2 0 
+Query 375: Top 10 matching docs
+0 9 8 7 1 5 6 4 3 2 
+Query 376: Top 10 matching docs
+1 7 4 0 2 9 8 3 6 5 
+Query 377: Top 10 matching docs
+3 6 7 5 0 9 4 8 1 2 
+Query 378: Top 10 matching docs
+4 1 7 5 9 8 6 3 0 2 
+Query 379: Top 10 matching docs
+8 4 6 9 7 0 2 1 5 3 
+Query 380: Top 10 matching docs
+9 2 8 4 0 7 1 5 3 6 
+Query 381: Top 10 matching docs
+9 2 7 4 6 1 0 8 3 5 
+Query 382: Top 10 matching docs
+2 0 7 5 9 3 4 6 1 8 
+Query 383: Top 10 matching docs
+8 3 9 7 4 2 6 5 1 0 
+Query 384: Top 10 matching docs
+7 1 4 2 3 9 8 6 5 0 
+Query 385: Top 10 matching docs
+6 7 4 0 9 8 5 2 1 3 
+Query 386: Top 10 matching docs
+1 3 5 0 2 9 4 6 7 8 
+Query 387: Top 10 matching docs
+7 9 8 2 1 4 0 5 3 6 
+Query 388: Top 10 matching docs
+0 1 4 7 2 9 8 5 6 3 
+Query 389: Top 10 matching docs
+7 1 4 9 2 3 8 5 0 6 
+Query 390: Top 10 matching docs
+6 3 2 9 7 8 1 4 0 5 
+Query 391: Top 10 matching docs
+4 5 7 8 2 0 9 1 6 3 
+Query 392: Top 10 matching docs
+0 6 8 3 5 4 2 7 9 1 
+Query 393: Top 10 matching docs
+7 9 0 4 8 1 2 3 6 5 
+Query 394: Top 10 matching docs
+1 7 4 8 5 2 6 0 3 9 
+Query 395: Top 10 matching docs
+0 6 9 7 2 5 1 3 8 4 
+Query 396: Top 10 matching docs
+4 7 2 5 8 3 0 9 1 6 
+Query 397: Top 10 matching docs
+0 5 8 7 2 1 4 9 6 3 
+Query 398: Top 10 matching docs
+8 9 2 1 7 5 4 0 6 3 
+Query 399: Top 10 matching docs
+5 1 2 8 0 7 9 3 4 6 
+Query 400: Top 10 matching docs
+7 1 4 9 8 5 0 2 6 3 
+Query 401: Top 10 matching docs
+2 6 0 8 7 4 9 1 5 3 
+Query 402: Top 10 matching docs
+9 5 1 6 0 8 7 2 3 4 
+Query 403: Top 10 matching docs
+2 1 4 8 6 0 9 7 5 3 
+Query 404: Top 10 matching docs
+3 1 2 0 5 7 9 4 6 8 
+Query 405: Top 10 matching docs
+0 6 9 4 1 5 7 2 8 3 
+Query 406: Top 10 matching docs
+4 8 1 2 9 7 3 5 0 6 
+Query 407: Top 10 matching docs
+9 8 5 4 7 2 0 1 3 6 
+Query 408: Top 10 matching docs
+2 1 4 0 7 6 5 9 3 8 
+Query 409: Top 10 matching docs
+0 2 3 7 8 9 1 6 4 5 
+Query 410: Top 10 matching docs
+2 5 8 7 0 3 1 6 4 9 
+Query 411: Top 10 matching docs
+8 4 6 3 7 2 5 0 9 1 
+Query 412: Top 10 matching docs
+0 4 3 8 2 5 9 6 7 1 
+Query 413: Top 10 matching docs
+8 9 7 0 1 3 5 2 6 4 
+Query 414: Top 10 matching docs
+9 1 4 0 5 8 7 6 3 2 
+Query 415: Top 10 matching docs
+1 6 8 9 0 7 3 4 5 2 
+Query 416: Top 10 matching docs
+4 1 0 9 5 2 8 6 7 3 
+Query 417: Top 10 matching docs
+4 8 5 3 9 7 1 6 0 2 
+Query 418: Top 10 matching docs
+8 5 7 1 6 4 9 0 3 2 
+Query 419: Top 10 matching docs
+0 2 9 5 7 6 4 1 8 3 
+Query 420: Top 10 matching docs
+7 2 8 4 0 1 9 6 3 5 
+Query 421: Top 10 matching docs
+4 0 1 8 5 9 3 7 6 2 
+Query 422: Top 10 matching docs
+5 0 4 8 9 7 2 3 6 1 
+Query 423: Top 10 matching docs
+1 2 7 4 6 0 9 8 5 3 
+Query 424: Top 10 matching docs
+4 0 7 8 1 9 2 6 5 3 
+Query 425: Top 10 matching docs
+1 7 8 4 0 9 5 2 3 6 
+Query 426: Top 10 matching docs
+1 7 9 6 4 5 2 0 3 8 
+Query 427: Top 10 matching docs
+4 2 8 7 0 1 9 3 5 6 
+Query 428: Top 10 matching docs
+7 8 1 2 9 4 5 0 3 6 
+Query 429: Top 10 matching docs
+6 1 8 5 4 3 0 9 7 2 
+Query 430: Top 10 matching docs
+7 8 0 1 6 9 4 2 5 3 
+Query 431: Top 10 matching docs
+8 4 6 9 0 1 7 2 5 3 
+Query 432: Top 10 matching docs
+7 4 9 5 0 1 8 6 2 3 
+Query 433: Top 10 matching docs
+0 9 2 8 7 4 5 6 1 3 
+Query 434: Top 10 matching docs
+4 8 7 0 9 6 5 1 2 3 
+Query 435: Top 10 matching docs
+2 4 6 5 9 1 0 7 3 8 
+Query 436: Top 10 matching docs
+9 3 5 0 6 8 4 2 7 1 
+Query 437: Top 10 matching docs
+1 5 8 0 4 7 2 6 9 3 
+Query 438: Top 10 matching docs
+2 8 4 1 7 9 5 6 0 3 
+Query 439: Top 10 matching docs
+1 7 2 4 5 8 3 9 6 0 
+Query 440: Top 10 matching docs
+4 2 3 5 1 9 7 8 6 0 
+Query 441: Top 10 matching docs
+4 7 8 5 0 9 2 6 3 1 
+Query 442: Top 10 matching docs
+9 7 5 8 6 1 3 2 4 0 
+Query 443: Top 10 matching docs
+1 7 9 2 8 6 4 5 3 0 
+Query 444: Top 10 matching docs
+5 8 2 4 7 1 9 6 0 3 
+Query 445: Top 10 matching docs
+7 2 0 5 6 4 8 9 3 1 
+Query 446: Top 10 matching docs
+7 4 0 6 8 9 1 5 2 3 
+Query 447: Top 10 matching docs
+9 1 6 0 4 2 8 5 3 7 
+Query 448: Top 10 matching docs
+1 7 4 9 5 6 8 0 2 3 
+Query 449: Top 10 matching docs
+2 5 1 7 0 4 6 8 9 3 
+Query 450: Top 10 matching docs
+7 0 4 5 8 9 2 1 3 6 
+Query 451: Top 10 matching docs
+2 4 0 7 9 1 6 5 3 8 
+Query 452: Top 10 matching docs
+8 7 0 9 4 3 5 1 2 6 
+Query 453: Top 10 matching docs
+9 0 5 4 8 7 1 2 3 6 
+Query 454: Top 10 matching docs
+4 1 2 3 8 5 9 6 7 0 
+Query 455: Top 10 matching docs
+6 1 9 5 8 0 4 7 2 3 
+Query 456: Top 10 matching docs
+2 8 6 4 7 0 9 1 3 5 
+Query 457: Top 10 matching docs
+7 4 5 2 1 3 0 6 9 8 
+Query 458: Top 10 matching docs
+8 3 7 0 2 9 5 1 6 4 
+Query 459: Top 10 matching docs
+7 2 9 4 3 0 1 6 8 5 
+Query 460: Top 10 matching docs
+1 4 3 0 6 9 7 2 5 8 
+Query 461: Top 10 matching docs
+8 5 6 0 2 1 9 4 7 3 
+Query 462: Top 10 matching docs
+4 8 7 1 0 6 2 5 3 9 
+Query 463: Top 10 matching docs
+9 6 7 4 3 1 8 2 0 5 
+Query 464: Top 10 matching docs
+1 6 9 0 4 7 5 2 3 8 
+Query 465: Top 10 matching docs
+8 9 3 1 0 5 4 2 7 6 
+Query 466: Top 10 matching docs
+7 4 0 1 5 9 8 6 2 3 
+Query 467: Top 10 matching docs
+4 0 7 2 6 9 1 3 5 8 
+Query 468: Top 10 matching docs
+6 9 1 7 0 2 4 5 8 3 
+Query 469: Top 10 matching docs
+4 9 5 7 8 1 6 3 0 2 
+Query 470: Top 10 matching docs
+6 9 3 2 4 1 5 8 0 7 
+Query 471: Top 10 matching docs
+0 1 6 8 9 4 3 7 5 2 
+Query 472: Top 10 matching docs
+8 2 0 9 5 3 7 4 6 1 
+Query 473: Top 10 matching docs
+1 4 9 6 2 8 0 5 7 3 
+Query 474: Top 10 matching docs
+0 7 1 4 8 6 2 9 3 5 
+Query 475: Top 10 matching docs
+9 5 8 4 2 1 7 3 0 6 
+Query 476: Top 10 matching docs
+1 5 7 9 6 0 8 2 4 3 
+Query 477: Top 10 matching docs
+7 8 4 0 9 6 1 3 2 5 
+Query 478: Top 10 matching docs
+1 0 4 9 6 8 7 2 3 5 
+Query 479: Top 10 matching docs
+5 2 0 6 9 4 3 8 7 1 
+Query 480: Top 10 matching docs
+8 2 9 4 7 5 3 6 0 1 
+Query 481: Top 10 matching docs
+9 1 0 2 7 6 5 4 3 8 
+Query 482: Top 10 matching docs
+4 0 7 8 9 2 6 1 5 3 
+Query 483: Top 10 matching docs
+4 5 1 2 7 8 0 3 9 6 
+Query 484: Top 10 matching docs
+1 5 9 2 8 6 4 0 7 3 
+Query 485: Top 10 matching docs
+0 9 4 1 7 5 6 2 3 8 
+Query 486: Top 10 matching docs
+9 2 5 7 8 3 4 1 0 6 
+Query 487: Top 10 matching docs
+1 0 2 7 8 3 9 4 6 5 
+Query 488: Top 10 matching docs
+4 0 7 9 1 2 5 6 8 3 
+Query 489: Top 10 matching docs
+2 4 3 8 0 5 7 9 6 1 
+Query 490: Top 10 matching docs
+5 7 1 4 8 2 0 6 9 3 
+Query 491: Top 10 matching docs
+4 9 2 0 7 6 1 5 3 8 
+Query 492: Top 10 matching docs
+8 9 7 0 5 2 3 6 4 1 
+Query 493: Top 10 matching docs
+7 5 8 0 1 3 2 4 9 6 
+Query 494: Top 10 matching docs
+9 5 2 6 7 1 3 0 8 4 
+Query 495: Top 10 matching docs
+7 2 6 4 1 8 9 5 0 3 
+Query 496: Top 10 matching docs
+4 7 9 2 0 6 8 1 5 3 
+Query 497: Top 10 matching docs
+7 8 0 2 4 9 1 5 3 6 
+Query 498: Top 10 matching docs
+8 6 0 2 4 5 7 1 9 3 
+Query 499: Top 10 matching docs
+1 7 0 4 9 6 5 8 2 3 
+Query 500: Top 10 matching docs
+0 6 2 9 1 7 4 5 8 3 
+Query 501: Top 10 matching docs
+4 0 6 8 1 3 9 5 7 2 
+Query 502: Top 10 matching docs
+0 6 1 9 7 5 4 3 2 8 
+Query 503: Top 10 matching docs
+0 7 9 4 8 1 6 2 5 3 
+Query 504: Top 10 matching docs
+2 9 4 7 0 1 8 5 3 6 
+Query 505: Top 10 matching docs
+1 5 7 6 8 4 2 3 9 0 
+Query 506: Top 10 matching docs
+0 3 4 1 5 6 8 9 7 2 
+Query 507: Top 10 matching docs
+7 4 6 1 0 5 9 8 2 3 
+Query 508: Top 10 matching docs
+9 6 5 7 0 2 1 4 8 3 
+Query 509: Top 10 matching docs
+2 8 7 4 0 1 9 5 3 6 
+Query 510: Top 10 matching docs
+4 0 7 8 1 2 9 5 3 6 
+Query 511: Top 10 matching docs
+5 4 7 8 0 1 2 6 3 9 
+Query 512: Top 10 matching docs
+7 1 9 0 6 2 4 8 3 5 
+Query 513: Top 10 matching docs
+2 0 7 4 6 5 1 9 8 3 
+Query 514: Top 10 matching docs
+1 4 0 7 9 6 8 5 3 2 
+Query 515: Top 10 matching docs
+6 8 9 5 1 0 3 4 2 7 
+Query 516: Top 10 matching docs
+1 7 8 9 3 0 4 5 2 6 
+Query 517: Top 10 matching docs
+2 1 7 5 6 4 9 0 8 3 
+Query 518: Top 10 matching docs
+6 2 1 5 0 3 7 8 9 4 
+Query 519: Top 10 matching docs
+9 1 2 7 8 3 0 4 5 6 
+Query 520: Top 10 matching docs
+2 0 8 3 9 7 4 1 6 5 
+Query 521: Top 10 matching docs
+4 9 1 3 7 2 0 8 6 5 
+Query 522: Top 10 matching docs
+0 7 9 5 1 4 2 8 6 3 
+Query 523: Top 10 matching docs
+9 5 6 8 1 7 0 2 4 3 
+Query 524: Top 10 matching docs
+4 8 2 7 1 9 6 5 3 0 
+Query 525: Top 10 matching docs
+4 9 6 7 8 1 0 2 5 3 
+Query 526: Top 10 matching docs
+7 0 8 5 4 3 9 6 2 1 
+Query 527: Top 10 matching docs
+9 0 6 1 8 5 4 2 7 3 
+Query 528: Top 10 matching docs
+9 4 1 2 8 6 0 5 7 3 
+Query 529: Top 10 matching docs
+8 9 4 3 6 1 5 0 7 2 
+Query 530: Top 10 matching docs
+0 7 4 1 3 9 2 8 6 5 
+Query 531: Top 10 matching docs
+4 9 7 5 8 0 6 2 1 3 
+Query 532: Top 10 matching docs
+5 8 0 1 9 2 7 3 4 6 
+Query 533: Top 10 matching docs
+0 1 9 4 7 6 3 2 5 8 
+Query 534: Top 10 matching docs
+4 6 0 9 1 2 8 7 5 3 
+Query 535: Top 10 matching docs
+0 5 1 8 9 3 7 2 6 4 
+Query 536: Top 10 matching docs
+0 1 9 7 6 2 8 5 3 4 
+Query 537: Top 10 matching docs
+9 6 0 4 7 1 3 2 5 8 
+Query 538: Top 10 matching docs
+8 4 5 9 0 3 1 7 2 6 
+Query 539: Top 10 matching docs
+5 7 4 1 2 0 8 3 6 9 
+Query 540: Top 10 matching docs
+8 1 0 4 2 9 3 7 5 6 
+Query 541: Top 10 matching docs
+1 9 5 8 4 2 7 3 6 0 
+Query 542: Top 10 matching docs
+5 3 9 7 0 8 6 2 1 4 
+Query 543: Top 10 matching docs
+2 7 6 5 1 8 4 0 9 3 
+Query 544: Top 10 matching docs
+9 7 8 0 2 6 1 4 5 3 
+Query 545: Top 10 matching docs
+5 2 1 4 9 8 3 7 6 0 
+Query 546: Top 10 matching docs
+8 0 2 9 4 5 7 1 6 3 
+Query 547: Top 10 matching docs
+9 1 4 6 0 8 7 2 5 3 
+Query 548: Top 10 matching docs
+0 1 4 8 7 6 2 9 5 3 
+Query 549: Top 10 matching docs
+0 9 8 6 4 5 7 2 1 3 
+Query 550: Top 10 matching docs
+2 1 3 4 0 6 9 5 7 8 
+Query 551: Top 10 matching docs
+0 7 9 8 1 2 4 6 3 5 
+Query 552: Top 10 matching docs
+2 7 0 5 4 8 3 9 6 1 
+Query 553: Top 10 matching docs
+1 2 4 5 0 7 3 6 8 9 
+Query 554: Top 10 matching docs
+1 8 7 0 9 4 5 2 6 3 
+Query 555: Top 10 matching docs
+1 2 3 8 0 4 9 6 7 5 
+Query 556: Top 10 matching docs
+0 4 7 1 5 6 9 8 2 3 
+Query 557: Top 10 matching docs
+8 4 3 0 9 1 7 6 2 5 
+Query 558: Top 10 matching docs
+8 0 4 7 9 2 1 6 5 3 
+Query 559: Top 10 matching docs
+2 4 0 7 1 8 5 3 9 6 
+Query 560: Top 10 matching docs
+7 8 2 4 1 9 0 3 5 6 
+Query 561: Top 10 matching docs
+4 7 9 0 6 5 3 1 2 8 
+Query 562: Top 10 matching docs
+4 8 7 2 1 6 0 3 9 5 
+Query 563: Top 10 matching docs
+8 1 7 4 9 2 0 5 3 6 
+Query 564: Top 10 matching docs
+1 7 6 5 3 9 8 2 0 4 
+Query 565: Top 10 matching docs
+8 4 9 6 2 1 5 0 7 3 
+Query 566: Top 10 matching docs
+6 9 7 1 0 4 2 8 3 5 
+Query 567: Top 10 matching docs
+9 1 8 0 6 4 3 5 7 2 
+Query 568: Top 10 matching docs
+0 2 8 4 1 9 7 5 6 3 
+Query 569: Top 10 matching docs
+1 2 5 9 0 7 4 3 6 8 
+Query 570: Top 10 matching docs
+0 7 2 9 4 1 8 3 5 6 
+Query 571: Top 10 matching docs
+8 1 5 3 2 0 9 4 6 7 
+Query 572: Top 10 matching docs
+4 9 1 8 7 5 3 0 2 6 
+Query 573: Top 10 matching docs
+8 1 0 5 9 2 7 4 6 3 
+Query 574: Top 10 matching docs
+4 7 8 2 5 1 0 9 3 6 
+Query 575: Top 10 matching docs
+2 1 9 8 5 4 0 7 3 6 
+Query 576: Top 10 matching docs
+0 9 6 2 7 4 1 3 5 8 
+Query 577: Top 10 matching docs
+0 5 1 2 9 4 8 6 7 3 
+Query 578: Top 10 matching docs
+6 9 5 0 1 2 7 8 3 4 
+Query 579: Top 10 matching docs
+5 1 6 2 9 3 0 7 8 4 
+Query 580: Top 10 matching docs
+1 0 7 4 3 2 8 5 6 9 
+Query 581: Top 10 matching docs
+1 2 9 7 8 5 0 3 4 6 
+Query 582: Top 10 matching docs
+4 0 9 7 6 1 8 3 2 5 
+Query 583: Top 10 matching docs
+6 1 7 2 8 4 3 9 0 5 
+Query 584: Top 10 matching docs
+6 5 1 0 7 8 3 2 9 4 
+Query 585: Top 10 matching docs
+9 1 2 4 3 7 8 5 0 6 
+Query 586: Top 10 matching docs
+0 5 4 2 1 9 6 3 8 7 
+Query 587: Top 10 matching docs
+7 3 5 4 8 6 1 0 9 2 
+Query 588: Top 10 matching docs
+4 7 9 1 0 5 2 6 3 8 
+Query 589: Top 10 matching docs
+7 8 9 6 0 4 1 3 2 5 
+Query 590: Top 10 matching docs
+9 2 5 8 0 3 4 7 1 6 
+Query 591: Top 10 matching docs
+4 2 5 8 7 0 9 6 1 3 
+Query 592: Top 10 matching docs
+4 0 7 1 5 8 6 2 9 3 
+Query 593: Top 10 matching docs
+1 8 5 9 4 2 0 7 3 6 
+Query 594: Top 10 matching docs
+1 7 5 0 2 6 4 8 3 9 
+Query 595: Top 10 matching docs
+1 7 9 4 2 3 6 8 0 5 
+Query 596: Top 10 matching docs
+4 9 1 0 6 3 7 2 5 8 
+Query 597: Top 10 matching docs
+1 0 9 4 7 3 8 2 5 6 
+Query 598: Top 10 matching docs
+7 6 9 2 1 8 5 0 4 3 
+Query 599: Top 10 matching docs
+4 3 0 6 1 8 5 9 2 7 
+Query 600: Top 10 matching docs
+4 9 2 0 7 6 8 1 3 5 
+Query 601: Top 10 matching docs
+6 3 0 5 7 4 1 9 2 8 
+Query 602: Top 10 matching docs
+4 9 0 5 3 2 8 1 7 6 
+Query 603: Top 10 matching docs
+5 2 9 7 1 8 4 0 6 3 
+Query 604: Top 10 matching docs
+9 2 5 1 4 0 7 6 3 8 
+Query 605: Top 10 matching docs
+1 0 5 4 9 7 2 3 8 6 
+Query 606: Top 10 matching docs
+1 7 2 5 0 4 9 6 8 3 
+Query 607: Top 10 matching docs
+0 8 1 2 9 3 4 5 6 7 
+Query 608: Top 10 matching docs
+7 1 2 4 5 6 8 3 0 9 
+Query 609: Top 10 matching docs
+4 8 5 1 2 9 7 0 3 6 
+Query 610: Top 10 matching docs
+9 4 0 5 1 7 8 3 2 6 
+Query 611: Top 10 matching docs
+7 0 9 5 4 6 3 1 8 2 
+Query 612: Top 10 matching docs
+1 4 7 2 8 3 0 6 9 5 
+Query 613: Top 10 matching docs
+0 4 7 9 8 3 2 6 5 1 
+Query 614: Top 10 matching docs
+7 0 1 5 3 4 2 9 6 8 
+Query 615: Top 10 matching docs
+7 0 1 2 9 5 4 8 6 3 
+Query 616: Top 10 matching docs
+8 9 1 0 5 7 2 6 4 3 
+Query 617: Top 10 matching docs
+7 4 9 0 5 1 6 2 8 3 
+Query 618: Top 10 matching docs
+9 7 2 8 6 4 5 1 3 0 
+Query 619: Top 10 matching docs
+9 4 2 6 7 3 0 1 8 5 
+Query 620: Top 10 matching docs
+0 7 2 8 4 9 1 6 5 3 
+Query 621: Top 10 matching docs
+0 1 8 7 9 5 4 2 6 3 
+Query 622: Top 10 matching docs
+4 2 9 3 6 5 7 0 8 1 
+Query 623: Top 10 matching docs
+9 4 2 3 7 6 8 1 0 5 
+Query 624: Top 10 matching docs
+1 3 6 7 4 9 5 0 8 2 
+Query 625: Top 10 matching docs
+0 4 6 9 1 5 7 8 2 3 
+Query 626: Top 10 matching docs
+4 1 9 8 0 5 7 2 6 3 
+Query 627: Top 10 matching docs
+8 5 4 2 9 3 1 7 0 6 
+Query 628: Top 10 matching docs
+8 5 3 0 1 2 4 6 7 9 
+Query 629: Top 10 matching docs
+0 8 7 5 9 6 1 4 2 3 
+Query 630: Top 10 matching docs
+8 9 7 4 0 6 5 1 2 3 
+Query 631: Top 10 matching docs
+2 8 5 7 1 9 6 0 4 3 
+Query 632: Top 10 matching docs
+4 8 9 2 5 0 1 7 6 3 
+Query 633: Top 10 matching docs
+6 4 5 8 1 2 0 7 9 3 
+Query 634: Top 10 matching docs
+4 0 2 1 9 6 8 3 5 7 
+Query 635: Top 10 matching docs
+0 6 4 8 1 5 2 9 7 3 
+Query 636: Top 10 matching docs
+4 2 0 7 8 1 6 3 9 5 
+Query 637: Top 10 matching docs
+7 1 3 8 4 2 0 5 9 6 
+Query 638: Top 10 matching docs
+9 1 6 4 2 0 5 8 7 3 
+Query 639: Top 10 matching docs
+0 7 9 2 8 4 1 3 5 6 
+Query 640: Top 10 matching docs
+8 4 5 7 0 2 6 1 9 3 
+Query 641: Top 10 matching docs
+0 7 8 6 2 4 5 3 1 9 
+Query 642: Top 10 matching docs
+1 7 4 8 2 5 0 9 3 6 
+Query 643: Top 10 matching docs
+1 8 2 7 4 3 0 6 9 5 
+Query 644: Top 10 matching docs
+3 8 2 0 6 7 9 5 1 4 
+Query 645: Top 10 matching docs
+6 2 7 8 0 5 9 1 4 3 
+Query 646: Top 10 matching docs
+6 7 2 5 0 4 1 8 3 9 
+Query 647: Top 10 matching docs
+1 3 6 4 0 5 7 9 8 2 
+Query 648: Top 10 matching docs
+1 2 7 8 6 4 9 0 3 5 
+Query 649: Top 10 matching docs
+4 6 3 1 0 8 7 5 2 9 
+Query 650: Top 10 matching docs
+4 1 3 9 5 2 0 7 6 8 
+Query 651: Top 10 matching docs
+1 4 7 9 5 2 8 0 6 3 
+Query 652: Top 10 matching docs
+9 8 0 5 4 2 1 6 7 3 
+Query 653: Top 10 matching docs
+7 0 4 1 6 5 8 9 3 2 
+Query 654: Top 10 matching docs
+4 7 0 2 8 5 1 9 6 3 
+Query 655: Top 10 matching docs
+6 8 9 2 4 7 1 0 3 5 
+Query 656: Top 10 matching docs
+7 4 8 3 2 9 1 0 5 6 
+Query 657: Top 10 matching docs
+0 1 5 7 9 8 6 2 4 3 
+Query 658: Top 10 matching docs
+2 9 1 0 4 8 7 6 5 3 
+Query 659: Top 10 matching docs
+1 7 3 4 8 2 0 5 6 9 
+Query 660: Top 10 matching docs
+8 0 3 1 5 2 6 9 4 7 
+Query 661: Top 10 matching docs
+6 0 9 1 8 3 4 7 5 2 
+Query 662: Top 10 matching docs
+6 7 4 2 0 9 1 3 8 5 
+Query 663: Top 10 matching docs
+5 2 3 9 4 0 6 8 7 1 
+Query 664: Top 10 matching docs
+9 1 3 7 0 2 6 4 5 8 
+Query 665: Top 10 matching docs
+4 9 8 1 7 6 5 0 2 3 
+Query 666: Top 10 matching docs
+7 8 4 0 6 1 9 5 2 3 
+Query 667: Top 10 matching docs
+1 4 8 2 5 6 7 0 3 9 
+Query 668: Top 10 matching docs
+9 0 7 4 1 8 5 2 6 3 
+Query 669: Top 10 matching docs
+2 7 5 9 6 0 3 8 4 1 
+Query 670: Top 10 matching docs
+8 0 4 7 5 9 1 2 3 6 
+Query 671: Top 10 matching docs
+0 1 7 3 2 6 4 9 8 5 
+Query 672: Top 10 matching docs
+6 2 5 7 1 0 3 8 4 9 
+Query 673: Top 10 matching docs
+7 9 6 2 0 1 3 8 5 4 
+Query 674: Top 10 matching docs
+4 6 3 5 0 1 7 2 9 8 
+Query 675: Top 10 matching docs
+7 4 0 8 1 2 9 6 5 3 
+Query 676: Top 10 matching docs
+7 1 2 3 6 4 5 9 0 8 
+Query 677: Top 10 matching docs
+3 0 8 7 4 9 1 5 6 2 
+Query 678: Top 10 matching docs
+9 2 6 5 7 1 0 3 8 4 
+Query 679: Top 10 matching docs
+0 4 2 8 7 1 6 9 5 3 
+Query 680: Top 10 matching docs
+7 0 4 6 9 1 8 5 2 3 
+Query 681: Top 10 matching docs
+1 7 0 4 9 3 5 2 6 8 
+Query 682: Top 10 matching docs
+0 1 4 7 5 8 6 9 2 3 
+Query 683: Top 10 matching docs
+4 5 3 2 9 1 7 0 6 8 
+Query 684: Top 10 matching docs
+9 0 7 1 4 2 8 5 3 6 
+Query 685: Top 10 matching docs
+0 9 7 1 6 4 2 8 3 5 
+Query 686: Top 10 matching docs
+7 4 1 8 0 9 6 3 2 5 
+Query 687: Top 10 matching docs
+1 0 7 6 2 4 8 9 3 5 
+Query 688: Top 10 matching docs
+5 0 8 7 9 1 6 2 4 3 
+Query 689: Top 10 matching docs
+2 5 7 9 0 1 6 4 3 8 
+Query 690: Top 10 matching docs
+8 0 2 5 1 6 7 9 3 4 
+Query 691: Top 10 matching docs
+1 7 9 5 0 8 4 6 2 3 
+Query 692: Top 10 matching docs
+7 5 9 0 1 3 4 2 6 8 
+Query 693: Top 10 matching docs
+2 1 4 6 9 5 3 0 8 7 
+Query 694: Top 10 matching docs
+1 5 9 0 7 4 2 6 3 8 
+Query 695: Top 10 matching docs
+8 2 7 6 1 4 9 0 3 5 
+Query 696: Top 10 matching docs
+4 9 1 2 3 8 6 0 7 5 
+Query 697: Top 10 matching docs
+8 7 1 9 4 0 2 6 3 5 
+Query 698: Top 10 matching docs
+9 0 7 8 5 6 4 3 2 1 
+Query 699: Top 10 matching docs
+0 2 1 4 7 3 9 5 6 8 
+Query 700: Top 10 matching docs
+4 9 8 1 7 0 2 5 6 3 
+Query 701: Top 10 matching docs
+4 8 6 0 1 9 2 5 7 3 
+Query 702: Top 10 matching docs
+0 4 7 1 2 5 9 3 6 8 
+Query 703: Top 10 matching docs
+6 8 0 9 2 7 5 4 1 3 
+Query 704: Top 10 matching docs
+8 1 7 9 6 5 4 2 0 3 
+Query 705: Top 10 matching docs
+7 0 6 5 1 8 9 4 3 2 
+Query 706: Top 10 matching docs
+8 7 5 1 0 2 9 6 3 4 
+Query 707: Top 10 matching docs
+9 8 4 7 5 3 2 1 6 0 
+Query 708: Top 10 matching docs
+4 3 0 9 8 1 5 6 2 7 
+Query 709: Top 10 matching docs
+1 2 5 4 0 6 9 7 3 8 
+Query 710: Top 10 matching docs
+8 2 4 1 6 9 7 0 5 3 
+Query 711: Top 10 matching docs
+8 1 4 7 2 5 3 6 0 9 
+Query 712: Top 10 matching docs
+4 0 1 5 9 7 2 8 6 3 
+Query 713: Top 10 matching docs
+9 7 6 0 5 8 4 2 3 1 
+Query 714: Top 10 matching docs
+7 0 1 3 4 2 9 6 8 5 
+Query 715: Top 10 matching docs
+4 7 6 9 0 2 8 1 5 3 
+Query 716: Top 10 matching docs
+4 2 7 0 3 1 5 8 9 6 
+Query 717: Top 10 matching docs
+9 5 0 4 1 2 8 7 6 3 
+Query 718: Top 10 matching docs
+4 9 2 7 5 1 8 0 3 6 
+Query 719: Top 10 matching docs
+1 8 9 0 6 4 5 3 2 7 
+Query 720: Top 10 matching docs
+0 6 7 8 4 5 1 9 2 3 
+Query 721: Top 10 matching docs
+1 0 8 7 9 4 2 5 6 3 
+Query 722: Top 10 matching docs
+2 4 9 5 1 6 0 8 7 3 
+Query 723: Top 10 matching docs
+0 9 1 5 8 2 4 3 6 7 
+Query 724: Top 10 matching docs
+4 7 0 6 3 8 9 1 2 5 
+Query 725: Top 10 matching docs
+0 1 4 6 9 8 2 3 7 5 
+Query 726: Top 10 matching docs
+5 9 1 4 2 6 0 8 3 7 
+Query 727: Top 10 matching docs
+0 4 7 9 6 2 5 8 1 3 
+Query 728: Top 10 matching docs
+3 5 9 8 0 1 7 2 4 6 
+Query 729: Top 10 matching docs
+9 4 2 1 0 5 8 3 6 7 
+Query 730: Top 10 matching docs
+7 1 9 8 0 3 6 4 5 2 
+Query 731: Top 10 matching docs
+5 2 0 3 7 9 6 4 1 8 
+Query 732: Top 10 matching docs
+1 8 7 2 0 6 9 3 5 4 
+Query 733: Top 10 matching docs
+1 9 0 2 3 5 6 8 7 4 
+Query 734: Top 10 matching docs
+9 0 8 4 6 2 1 7 5 3 
+Query 735: Top 10 matching docs
+4 7 1 0 8 2 3 5 6 9 
+Query 736: Top 10 matching docs
+0 7 2 3 6 8 9 5 4 1 
+Query 737: Top 10 matching docs
+0 2 9 7 6 1 8 5 4 3 
+Query 738: Top 10 matching docs
+1 8 2 7 5 3 9 4 6 0 
+Query 739: Top 10 matching docs
+0 9 7 5 3 4 1 6 8 2 
+Query 740: Top 10 matching docs
+5 4 0 7 3 1 9 2 8 6 
+Query 741: Top 10 matching docs
+2 6 5 9 1 7 8 3 0 4 
+Query 742: Top 10 matching docs
+1 8 2 6 5 0 9 3 4 7 
+Query 743: Top 10 matching docs
+0 5 2 6 1 3 7 8 4 9 
+Query 744: Top 10 matching docs
+0 8 4 7 9 1 3 2 5 6 
+Query 745: Top 10 matching docs
+0 2 8 9 6 4 3 1 5 7 
+Query 746: Top 10 matching docs
+5 0 8 4 3 6 1 9 7 2 
+Query 747: Top 10 matching docs
+1 2 7 4 5 9 3 8 0 6 
+Query 748: Top 10 matching docs
+3 9 4 1 2 5 6 8 7 0 
+Query 749: Top 10 matching docs
+1 5 0 2 3 9 7 4 8 6 
+Query 750: Top 10 matching docs
+7 6 5 0 2 4 9 3 1 8 
+Query 751: Top 10 matching docs
+7 1 3 8 6 2 0 5 9 4 
+Query 752: Top 10 matching docs
+7 8 5 4 3 1 0 2 9 6 
+Query 753: Top 10 matching docs
+0 4 6 9 8 3 5 1 7 2 
+Query 754: Top 10 matching docs
+0 5 1 4 6 9 8 7 2 3 
+Query 755: Top 10 matching docs
+9 7 8 2 0 4 1 6 5 3 
+Query 756: Top 10 matching docs
+8 2 4 1 5 7 9 0 6 3 
+Query 757: Top 10 matching docs
+4 7 0 9 6 5 1 2 3 8 
+Query 758: Top 10 matching docs
+2 9 8 0 7 3 6 4 1 5 
+Query 759: Top 10 matching docs
+9 1 8 5 4 7 2 3 0 6 
+Query 760: Top 10 matching docs
+0 6 4 8 5 2 9 1 7 3 
+Query 761: Top 10 matching docs
+4 8 9 0 1 3 5 2 7 6 
+Query 762: Top 10 matching docs
+1 7 8 0 3 5 4 6 9 2 
+Query 763: Top 10 matching docs
+0 8 9 6 7 1 2 4 5 3 
+Query 764: Top 10 matching docs
+2 4 9 0 8 7 1 5 6 3 
+Query 765: Top 10 matching docs
+1 0 7 2 5 6 4 9 3 8 
+Query 766: Top 10 matching docs
+8 4 5 7 0 9 2 3 1 6 
+Query 767: Top 10 matching docs
+4 9 1 5 2 0 8 7 3 6 
+Query 768: Top 10 matching docs
+4 7 3 2 6 8 1 0 5 9 
+Query 769: Top 10 matching docs
+4 8 2 5 7 6 9 1 0 3 
+Query 770: Top 10 matching docs
+7 4 8 5 1 2 0 9 6 3 
+Query 771: Top 10 matching docs
+4 2 1 0 7 8 9 6 5 3 
+Query 772: Top 10 matching docs
+7 8 4 0 1 2 9 5 6 3 
+Query 773: Top 10 matching docs
+4 8 0 3 7 9 1 6 2 5 
+Query 774: Top 10 matching docs
+7 4 1 9 0 5 6 2 8 3 
+Query 775: Top 10 matching docs
+3 0 4 6 1 5 9 8 2 7 
+Query 776: Top 10 matching docs
+0 7 8 4 3 9 1 5 6 2 
+Query 777: Top 10 matching docs
+4 9 1 5 7 8 6 3 0 2 
+Query 778: Top 10 matching docs
+1 8 2 4 7 9 5 0 3 6 
+Query 779: Top 10 matching docs
+5 1 0 7 8 2 4 6 3 9 
+Query 780: Top 10 matching docs
+4 5 9 7 0 6 3 1 2 8 
+Query 781: Top 10 matching docs
+7 5 2 9 8 0 4 1 6 3 
+Query 782: Top 10 matching docs
+7 0 2 8 9 5 6 4 1 3 
+Query 783: Top 10 matching docs
+4 7 8 2 3 9 1 0 6 5 
+Query 784: Top 10 matching docs
+4 1 6 0 8 7 9 3 2 5 
+Query 785: Top 10 matching docs
+2 8 5 4 0 3 9 7 1 6 
+Query 786: Top 10 matching docs
+2 5 7 8 9 1 4 3 6 0 
+Query 787: Top 10 matching docs
+9 2 0 6 4 3 7 8 5 1 
+Query 788: Top 10 matching docs
+9 4 1 2 6 8 0 3 5 7 
+Query 789: Top 10 matching docs
+0 6 7 1 8 2 9 4 5 3 
+Query 790: Top 10 matching docs
+6 5 0 1 4 9 2 3 8 7 
+Query 791: Top 10 matching docs
+9 6 8 5 4 7 2 1 0 3 
+Query 792: Top 10 matching docs
+0 4 7 5 8 1 3 9 2 6 
+Query 793: Top 10 matching docs
+6 8 2 1 9 5 7 0 3 4 
+Query 794: Top 10 matching docs
+1 3 8 5 4 9 0 6 7 2 
+Query 795: Top 10 matching docs
+9 4 2 0 5 7 8 3 6 1 
+Query 796: Top 10 matching docs
+8 0 4 1 7 9 6 3 2 5 
+Query 797: Top 10 matching docs
+9 0 5 4 1 7 2 8 6 3 
+Query 798: Top 10 matching docs
+7 5 2 8 9 1 0 4 6 3 
+Query 799: Top 10 matching docs
+1 5 4 2 8 0 6 3 9 7 
+Query 800: Top 10 matching docs
+0 4 8 9 7 2 1 3 6 5 
+Query 801: Top 10 matching docs
+9 4 7 0 1 8 2 6 5 3 
+Query 802: Top 10 matching docs
+0 1 2 7 3 5 4 9 6 8 
+Query 803: Top 10 matching docs
+4 5 0 8 3 9 7 6 2 1 
+Query 804: Top 10 matching docs
+1 5 9 3 7 0 2 6 4 8 
+Query 805: Top 10 matching docs
+7 9 1 4 3 0 6 2 8 5 
+Query 806: Top 10 matching docs
+7 2 9 0 3 5 4 8 6 1 
+Query 807: Top 10 matching docs
+1 3 7 5 0 2 8 4 9 6 
+Query 808: Top 10 matching docs
+1 2 7 8 6 9 4 0 5 3 
+Query 809: Top 10 matching docs
+4 7 5 9 8 2 3 0 1 6 
+Query 810: Top 10 matching docs
+6 2 4 9 5 0 1 7 8 3 
+Query 811: Top 10 matching docs
+5 3 4 9 2 7 8 1 6 0 
+Query 812: Top 10 matching docs
+2 1 9 4 5 8 7 6 0 3 
+Query 813: Top 10 matching docs
+5 4 2 9 0 6 7 1 8 3 
+Query 814: Top 10 matching docs
+4 0 3 9 6 7 5 1 2 8 
+Query 815: Top 10 matching docs
+6 7 4 0 2 3 9 1 5 8 
+Query 816: Top 10 matching docs
+1 7 5 2 8 6 0 4 3 9 
+Query 817: Top 10 matching docs
+7 0 4 9 2 8 6 5 3 1 
+Query 818: Top 10 matching docs
+8 1 9 4 6 0 5 7 2 3 
+Query 819: Top 10 matching docs
+0 4 1 6 5 9 7 3 2 8 
+Query 820: Top 10 matching docs
+4 7 9 8 2 5 6 1 0 3 
+Query 821: Top 10 matching docs
+9 7 1 4 2 0 3 6 5 8 
+Query 822: Top 10 matching docs
+4 6 2 1 8 9 0 7 3 5 
+Query 823: Top 10 matching docs
+7 0 8 9 2 1 3 5 6 4 
+Query 824: Top 10 matching docs
+0 4 5 2 9 3 7 8 6 1 
+Query 825: Top 10 matching docs
+9 5 0 2 1 6 4 7 8 3 
+Query 826: Top 10 matching docs
+4 8 1 6 0 5 9 2 3 7 
+Query 827: Top 10 matching docs
+8 2 1 4 0 5 7 9 6 3 
+Query 828: Top 10 matching docs
+2 0 7 9 4 5 8 1 3 6 
+Query 829: Top 10 matching docs
+4 5 0 1 9 7 2 8 6 3 
+Query 830: Top 10 matching docs
+8 4 7 0 6 2 9 3 5 1 
+Query 831: Top 10 matching docs
+4 8 0 7 9 2 1 3 6 5 
+Query 832: Top 10 matching docs
+1 4 5 3 2 9 0 8 6 7 
+Query 833: Top 10 matching docs
+5 4 7 8 1 2 9 0 3 6 
+Query 834: Top 10 matching docs
+0 4 8 5 1 9 6 2 7 3 
+Query 835: Top 10 matching docs
+4 7 5 8 9 1 0 6 3 2 
+Query 836: Top 10 matching docs
+4 7 1 9 0 6 5 8 2 3 
+Query 837: Top 10 matching docs
+0 9 8 4 7 1 2 5 6 3 
+Query 838: Top 10 matching docs
+7 8 1 2 9 4 0 3 5 6 
+Query 839: Top 10 matching docs
+4 5 0 7 1 8 3 9 2 6 
+Query 840: Top 10 matching docs
+5 4 2 1 0 9 3 7 8 6 
+Query 841: Top 10 matching docs
+9 5 0 6 4 8 1 7 3 2 
+Query 842: Top 10 matching docs
+2 0 7 9 4 1 6 3 8 5 
+Query 843: Top 10 matching docs
+8 4 1 5 2 6 7 9 3 0 
+Query 844: Top 10 matching docs
+4 0 9 1 5 6 7 2 3 8 
+Query 845: Top 10 matching docs
+3 8 5 9 0 1 7 4 6 2 
+Query 846: Top 10 matching docs
+0 4 5 1 9 8 2 3 7 6 
+Query 847: Top 10 matching docs
+4 8 7 6 1 0 9 3 5 2 
+Query 848: Top 10 matching docs
+0 7 2 1 5 6 9 4 3 8 
+Query 849: Top 10 matching docs
+0 9 8 7 4 1 6 3 5 2 
+Query 850: Top 10 matching docs
+8 0 1 9 4 6 2 7 5 3 
+Query 851: Top 10 matching docs
+1 2 8 4 5 0 7 9 6 3 
+Query 852: Top 10 matching docs
+2 5 8 4 0 6 7 9 3 1 
+Query 853: Top 10 matching docs
+2 0 9 4 1 8 5 6 3 7 
+Query 854: Top 10 matching docs
+8 9 2 4 1 5 3 7 6 0 
+Query 855: Top 10 matching docs
+1 8 0 4 7 6 5 2 9 3 
+Query 856: Top 10 matching docs
+2 5 4 0 9 8 7 1 6 3 
+Query 857: Top 10 matching docs
+1 0 2 4 3 9 5 7 8 6 
+Query 858: Top 10 matching docs
+4 5 8 6 3 9 1 0 7 2 
+Query 859: Top 10 matching docs
+5 0 7 2 1 4 9 6 3 8 
+Query 860: Top 10 matching docs
+8 6 1 7 2 3 4 0 5 9 
+Query 861: Top 10 matching docs
+0 3 5 4 8 9 1 2 6 7 
+Query 862: Top 10 matching docs
+1 3 7 2 5 8 9 0 4 6 
+Query 863: Top 10 matching docs
+8 5 2 6 0 9 4 1 7 3 
+Query 864: Top 10 matching docs
+9 2 4 7 5 0 6 8 3 1 
+Query 865: Top 10 matching docs
+7 0 2 3 5 8 1 9 6 4 
+Query 866: Top 10 matching docs
+7 0 6 1 9 2 5 8 4 3 
+Query 867: Top 10 matching docs
+2 8 7 1 5 4 9 3 6 0 
+Query 868: Top 10 matching docs
+7 1 2 0 5 8 9 4 3 6 
+Query 869: Top 10 matching docs
+1 7 0 5 4 6 3 9 8 2 
+Query 870: Top 10 matching docs
+8 0 7 6 1 2 9 4 5 3 
+Query 871: Top 10 matching docs
+5 1 0 8 6 3 9 2 7 4 
+Query 872: Top 10 matching docs
+0 9 4 1 2 7 8 3 5 6 
+Query 873: Top 10 matching docs
+4 8 2 1 7 0 9 5 6 3 
+Query 874: Top 10 matching docs
+9 1 8 2 0 4 7 3 6 5 
+Query 875: Top 10 matching docs
+5 4 1 8 9 3 0 2 6 7 
+Query 876: Top 10 matching docs
+9 1 7 0 5 2 6 4 8 3 
+Query 877: Top 10 matching docs
+7 5 6 9 8 2 4 3 1 0 
+Query 878: Top 10 matching docs
+0 4 9 8 6 7 1 5 3 2 
+Query 879: Top 10 matching docs
+4 1 8 5 0 9 2 6 3 7 
+Query 880: Top 10 matching docs
+8 6 9 7 2 1 4 0 5 3 
+Query 881: Top 10 matching docs
+1 4 7 2 0 6 8 9 5 3 
+Query 882: Top 10 matching docs
+2 9 4 3 6 1 7 8 5 0 
+Query 883: Top 10 matching docs
+8 2 9 1 0 4 5 7 6 3 
+Query 884: Top 10 matching docs
+1 0 7 2 3 8 5 4 6 9 
+Query 885: Top 10 matching docs
+1 6 0 7 9 3 2 4 5 8 
+Query 886: Top 10 matching docs
+5 1 2 9 3 6 0 4 8 7 
+Query 887: Top 10 matching docs
+1 4 8 6 0 7 3 2 9 5 
+Query 888: Top 10 matching docs
+9 6 1 5 0 4 2 8 3 7 
+Query 889: Top 10 matching docs
+1 2 8 4 3 5 7 0 9 6 
+Query 890: Top 10 matching docs
+2 3 7 6 4 5 1 9 0 8 
+Query 891: Top 10 matching docs
+7 9 3 0 5 8 1 4 2 6 
+Query 892: Top 10 matching docs
+2 3 0 4 8 1 7 9 6 5 
+Query 893: Top 10 matching docs
+5 4 2 1 3 9 8 6 0 7 
+Query 894: Top 10 matching docs
+9 8 0 6 4 2 5 1 3 7 
+Query 895: Top 10 matching docs
+2 0 9 5 1 3 4 8 7 6 
+Query 896: Top 10 matching docs
+4 9 8 0 6 7 1 2 5 3 
+Query 897: Top 10 matching docs
+7 0 6 4 8 9 2 1 3 5 
+Query 898: Top 10 matching docs
+6 7 4 5 0 2 9 8 1 3 
+Query 899: Top 10 matching docs
+7 9 4 1 0 6 5 2 8 3 
+Query 900: Top 10 matching docs
+2 8 1 5 7 3 0 9 4 6 
+Query 901: Top 10 matching docs
+0 8 5 7 4 9 2 3 1 6 
+Query 902: Top 10 matching docs
+4 7 5 9 0 8 3 2 1 6 
+Query 903: Top 10 matching docs
+8 4 5 9 1 0 6 3 7 2 
+Query 904: Top 10 matching docs
+9 1 0 7 8 4 3 6 5 2 
+Query 905: Top 10 matching docs
+7 6 0 9 8 5 3 1 4 2 
+Query 906: Top 10 matching docs
+0 4 9 6 5 8 2 7 3 1 
+Query 907: Top 10 matching docs
+4 9 1 7 0 2 3 6 5 8 
+Query 908: Top 10 matching docs
+7 9 8 1 6 5 4 0 3 2 
+Query 909: Top 10 matching docs
+1 7 2 8 5 0 9 6 3 4 
+Query 910: Top 10 matching docs
+7 0 2 8 3 4 1 5 9 6 
+Query 911: Top 10 matching docs
+0 6 7 5 4 2 1 8 9 3 
+Query 912: Top 10 matching docs
+7 9 5 4 0 2 8 6 3 1 
+Query 913: Top 10 matching docs
+8 4 3 2 9 0 1 7 5 6 
+Query 914: Top 10 matching docs
+6 2 8 7 1 4 9 0 3 5 
+Query 915: Top 10 matching docs
+5 0 1 2 7 3 8 9 4 6 
+Query 916: Top 10 matching docs
+9 7 4 1 0 8 2 6 3 5 
+Query 917: Top 10 matching docs
+1 7 8 5 9 2 6 0 4 3 
+Query 918: Top 10 matching docs
+7 9 2 1 3 0 4 6 8 5 
+Query 919: Top 10 matching docs
+6 9 1 3 4 0 7 5 2 8 
+Query 920: Top 10 matching docs
+4 0 6 9 3 7 5 8 1 2 
+Query 921: Top 10 matching docs
+9 7 2 0 6 8 1 5 3 4 
+Query 922: Top 10 matching docs
+4 8 6 0 9 3 5 2 7 1 
+Query 923: Top 10 matching docs
+2 6 8 7 4 0 1 5 9 3 
+Query 924: Top 10 matching docs
+0 1 2 9 4 3 7 5 6 8 
+Query 925: Top 10 matching docs
+6 7 0 1 4 9 8 2 3 5 
+Query 926: Top 10 matching docs
+1 0 7 5 2 6 3 8 4 9 
+Query 927: Top 10 matching docs
+8 4 9 0 5 1 3 2 7 6 
+Query 928: Top 10 matching docs
+4 6 5 2 9 1 0 7 3 8 
+Query 929: Top 10 matching docs
+8 2 9 4 7 0 6 1 3 5 
+Query 930: Top 10 matching docs
+7 2 0 8 4 5 9 6 1 3 
+Query 931: Top 10 matching docs
+1 0 7 2 9 3 8 4 6 5 
+Query 932: Top 10 matching docs
+7 6 2 9 0 5 4 1 3 8 
+Query 933: Top 10 matching docs
+4 2 7 6 1 0 9 8 5 3 
+Query 934: Top 10 matching docs
+0 1 2 7 9 5 3 8 6 4 
+Query 935: Top 10 matching docs
+2 9 4 8 6 0 5 1 3 7 
+Query 936: Top 10 matching docs
+1 0 6 9 5 7 4 8 3 2 
+Query 937: Top 10 matching docs
+2 1 9 7 0 4 8 5 6 3 
+Query 938: Top 10 matching docs
+8 6 2 1 7 0 5 3 4 9 
+Query 939: Top 10 matching docs
+9 4 2 5 7 0 1 3 8 6 
+Query 940: Top 10 matching docs
+0 8 5 2 9 1 7 4 6 3 
+Query 941: Top 10 matching docs
+4 1 2 8 9 7 0 6 5 3 
+Query 942: Top 10 matching docs
+4 7 9 8 6 2 0 1 3 5 
+Query 943: Top 10 matching docs
+7 0 2 1 4 8 6 5 3 9 
+Query 944: Top 10 matching docs
+1 6 9 0 4 8 2 5 7 3 
+Query 945: Top 10 matching docs
+5 6 1 7 0 3 4 9 2 8 
+Query 946: Top 10 matching docs
+0 7 2 4 5 9 8 1 3 6 
+Query 947: Top 10 matching docs
+4 7 0 2 9 6 5 1 8 3 
+Query 948: Top 10 matching docs
+4 7 1 2 0 5 6 9 3 8 
+Query 949: Top 10 matching docs
+9 6 7 5 1 4 0 2 8 3 
+Query 950: Top 10 matching docs
+1 4 0 6 8 2 9 7 5 3 
+Query 951: Top 10 matching docs
+9 0 5 8 3 1 6 7 2 4 
+Query 952: Top 10 matching docs
+9 1 6 0 4 2 5 8 3 7 
+Query 953: Top 10 matching docs
+2 7 4 5 1 9 0 8 6 3 
+Query 954: Top 10 matching docs
+0 7 9 1 2 4 5 8 3 6 
+Query 955: Top 10 matching docs
+7 1 4 0 2 3 9 5 8 6 
+Query 956: Top 10 matching docs
+2 8 0 7 6 5 4 1 3 9 
+Query 957: Top 10 matching docs
+4 1 9 8 7 6 5 2 0 3 
+Query 958: Top 10 matching docs
+8 1 3 4 9 0 2 7 6 5 
+Query 959: Top 10 matching docs
+0 2 5 7 6 1 9 8 3 4 
+Query 960: Top 10 matching docs
+4 9 7 1 5 8 0 2 3 6 
+Query 961: Top 10 matching docs
+4 9 2 3 1 7 0 8 6 5 
+Query 962: Top 10 matching docs
+2 5 9 1 4 3 6 0 8 7 
+Query 963: Top 10 matching docs
+9 2 4 8 1 7 5 6 3 0 
+Query 964: Top 10 matching docs
+4 7 0 2 1 5 9 3 8 6 
+Query 965: Top 10 matching docs
+2 0 4 3 5 7 9 6 1 8 
+Query 966: Top 10 matching docs
+6 1 9 3 5 2 8 0 4 7 
+Query 967: Top 10 matching docs
+0 9 1 6 4 2 8 7 5 3 
+Query 968: Top 10 matching docs
+1 4 5 6 2 9 3 0 7 8 
+Query 969: Top 10 matching docs
+0 6 1 7 2 9 8 4 3 5 
+Query 970: Top 10 matching docs
+7 6 4 2 5 9 8 0 1 3 
+Query 971: Top 10 matching docs
+5 6 4 1 2 9 7 0 3 8 
+Query 972: Top 10 matching docs
+5 7 8 1 0 2 6 4 3 9 
+Query 973: Top 10 matching docs
+4 2 8 1 0 6 5 9 7 3 
+Query 974: Top 10 matching docs
+1 8 5 7 2 9 0 6 4 3 
+Query 975: Top 10 matching docs
+2 9 8 0 7 1 4 3 6 5 
+Query 976: Top 10 matching docs
+2 9 6 0 1 5 4 8 7 3 
+Query 977: Top 10 matching docs
+4 7 1 8 0 2 3 5 9 6 
+Query 978: Top 10 matching docs
+1 5 6 0 4 9 2 7 8 3 
+Query 979: Top 10 matching docs
+8 4 0 3 9 2 6 1 7 5 
+Query 980: Top 10 matching docs
+6 7 2 0 9 1 4 3 8 5 
+Query 981: Top 10 matching docs
+9 2 4 1 6 7 8 0 5 3 
+Query 982: Top 10 matching docs
+6 8 2 7 1 4 3 5 9 0 
+Query 983: Top 10 matching docs
+7 9 2 6 8 4 0 3 1 5 
+Query 984: Top 10 matching docs
+4 8 9 7 3 0 2 1 5 6 
+Query 985: Top 10 matching docs
+0 7 4 3 8 1 2 9 6 5 
+Query 986: Top 10 matching docs
+2 4 1 5 7 0 6 3 9 8 
+Query 987: Top 10 matching docs
+8 7 1 6 0 4 2 9 3 5 
+Query 988: Top 10 matching docs
+0 2 4 3 1 9 7 6 8 5 
+Query 989: Top 10 matching docs
+4 8 0 2 1 9 3 7 6 5 
+Query 990: Top 10 matching docs
+5 0 7 6 4 3 2 9 1 8 
+Query 991: Top 10 matching docs
+0 5 8 4 1 7 2 3 6 9 
+Query 992: Top 10 matching docs
+2 7 9 4 5 8 0 6 1 3 
+Query 993: Top 10 matching docs
+5 2 1 0 4 6 8 9 3 7 
+Query 994: Top 10 matching docs
+4 8 0 9 7 3 1 5 2 6 
+Query 995: Top 10 matching docs
+5 7 1 8 9 4 3 6 0 2 
+Query 996: Top 10 matching docs
+0 7 5 2 1 9 4 3 6 8 
+Query 997: Top 10 matching docs
+1 7 9 8 5 6 4 0 2 3 
+Query 998: Top 10 matching docs
+5 8 4 1 0 9 6 7 2 3 
+Query 999: Top 10 matching docs
+7 8 4 2 0 6 1 9 5 3 
 ================================================================
