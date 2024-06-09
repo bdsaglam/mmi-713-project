@@ -8,11 +8,13 @@ build-cpu:
 build-gpu:
 	mkdir -p bin/
 	nvcc src/main.cu -o bin/main_cu
+	nvcc src/test_knn_cuda.cu -o bin/test_knn_cuda_cu
 
 build: build-cpu build-gpu
 
-test: build-cpu
+test: build-cpu build-gpu
 	bin/test_sorting_cpp
+	bin/test_knn_cuda_cu
 
 run-cpu: build-cpu
 	bin/main_cpp $(ARGS)
