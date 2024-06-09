@@ -61,13 +61,13 @@ __global__ void sumOverLastDimKernel(float *g_idata, float *g_odata, int D, int 
   * @param n_cols      number of rows
   * @param k           number of smallest element to select
   */
-__global__ void kSelectKernel(float *distances, long *indices, int n_rows, int n_cols, int k) {
+__global__ void kSelectKernel(float *distances, int *indices, int n_rows, int n_cols, int k) {
     unsigned int yIndex = blockIdx.x * blockDim.x + threadIdx.x;
     if (yIndex >= n_rows || k > n_cols) return;
 
     // Pointer shift and initialization
     float *p_dist = distances + yIndex * n_cols;
-    long *p_ind = indices + yIndex * n_cols;
+    int *p_ind = indices + yIndex * n_cols;
 
     // Initialize indices for tracking positions
     for (int i = 0; i < n_cols; i++) {
@@ -88,7 +88,7 @@ __global__ void kSelectKernel(float *distances, long *indices, int n_rows, int n
             p_dist[i] = p_dist[min_idx];
             p_dist[min_idx] = temp_dist;
 
-            long temp_ind = p_ind[i];
+            int temp_ind = p_ind[i];
             p_ind[i] = p_ind[min_idx];
             p_ind[min_idx] = temp_ind;
         }

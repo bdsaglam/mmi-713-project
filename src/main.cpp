@@ -11,8 +11,8 @@ int main(int argc, char *argv[]) {
     Params params;
     parseCommandLine(argc, argv, params);
 
-    long N = params.N;
-    long Q = params.Q;
+    int N = params.N;
+    int Q = params.Q;
 
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));

@@ -13,7 +13,7 @@
 
 int main(int argc, char *argv[]) {
     // Constants
-    long N = 1000; // Number of documents
+    int N = 1000; // Number of documents
     int D = 512; // Dimension of embedding vector
     int Q = 10;  // Number of queries
     int K = 10;  // Number of matches to return
@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
     float *h_distances = (float *)malloc(Q * N * D * sizeof(float));
     float *h_agg_distances = (float *)malloc(Q * N * sizeof(float));
-    long *h_indices = (long *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
+    int *h_indices = (int *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
     srand(time(NULL));
@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 
     // Allocate device memory
     float *d_documents, *d_queries, *d_distances, *d_agg_distances;
-    long *d_indices;
+    int *d_indices;
     cudaMalloc(&d_documents, N * D * sizeof(float));
     cudaMalloc(&d_queries, Q * D * sizeof(float));
     cudaMalloc(&d_distances, Q * N * D * sizeof(float));

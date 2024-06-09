@@ -15,13 +15,13 @@ int main(int argc, char *argv[]) {
     Params params;
     parseCommandLine(argc, argv, params);
 
-    long N = params.N;
-    long Q = params.Q;
+    int N = params.N;
+    int Q = params.Q;
 
     // Allocate host memory
     float *h_documents = (float *)malloc(N * D * sizeof(float));
     float *h_queries = (float *)malloc(Q * D * sizeof(float));
-    long *h_indices = (long *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
+    int *h_indices = (int *)malloc(Q * N * sizeof(long)); // Indices array to store the output of kSelectKernel
 
     // Initialize data with random values
     // srand(time(NULL));
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 
     // Allocate device memory
     float *d_documents, *d_queries, *d_distances, *d_agg_distances;
-    long *d_indices;
+    int *d_indices;
     cudaMalloc(&d_documents, N * D * sizeof(float));
     cudaMalloc(&d_queries, Q * D * sizeof(float));
     cudaMalloc(&d_distances, Q * N * D * sizeof(float));
